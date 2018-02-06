@@ -25,6 +25,11 @@ $alert-blue:        #d5edf8;
 $black:             #000;
 $white:             #fff;
 
+// Purple
+$primary: #242263;
+
+$primary-light: #2B4486;
+
 $light-gray:        #f8f9fa;
 $gray:              #eaedf2;
 $text-color:        #5c6b80;
@@ -37,7 +42,7 @@ $green:             #7dd667;
 $pink:              #f01d4f;
 $blue:              #2980b9;
 
-$link-color:        $pink;
+$link-color:        $primary;
 $link-hover:        darken($link-color, 9%);
 
 $border-color:      #ccc;

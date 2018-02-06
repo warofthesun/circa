@@ -20,7 +20,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $gray;
+	background-color: $white;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -102,10 +102,13 @@ LINK STYLES
 
 a, a:visited {
 	color: $link-color;
+	transition: all .5s;
+	text-decoration: none;
 
 	/* on hover */
 	&:hover, &:focus {
 		color: $link-hover;
+		border-bottom: 2px solid $link-hover;
 	}
 
 	/* on click */
@@ -174,16 +177,65 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color: $black;
+	background-color: rgba(0,0,0,0.0);
 }
 
 	#logo {
 		margin: 0.75em 0;
+		text-align: center;
+		top: 160px;
+		position: relative;
 
 		a {
 			color: $white;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: none;
+				border-bottom: 0px;
+			}
 		}
 	}
+
+	.top-half {
+		background-image: url('../images/header-background.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 1220px;
+	}
+
+
+	#target-balloon {
+		display: inline-block;
+	}
+
+	#kite, #balloon, #bird-1, #bird-2, #bird-3 {
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: relative;
+		display: inline-block;
+		border-top: 3px solid white;
+
+	}
+
+#kite {
+	top: 120px;
+	left: 250px;
+
+}
+
+#balloon {
+	opacity: 0;
+	top: -370px;
+	left: 650px;
+	transition: opacity .5s;
+
+	&.show {
+		opacity: 1;
+	}
+}
+
 
 /*********************
 NAVIGATION STYLES
@@ -197,16 +249,26 @@ the navs on the site so our css is cleaner
 and more scalable.
 
 */
+
+.header-nav {
+	position: absolute;
+	width: 100%;
+	background-color: $primary-light;
+	z-index: 50;
+}
 #mobile-nav {
 	text-align: center;
-	margin-bottom: 1em;
-	margin-top:-2em;
+	margin-bottom: 0em;
+	margin-top:0em;
+	padding: .5em;
 	transition: all .5s;
+	position: relative;
+	z-index: 99;
 
 	&.show {
 		margin-top: 0em;
-		padding: .5em;
-		background-color: white;
+
+		box-shadow: 0px 4px 6px rgba(0,0,0,0.5);
 
 		&:after {
 			content: "\f106";
@@ -239,6 +301,7 @@ and more scalable.
 	opacity: 0;
 	height: 0;
 	transition: all .5s;
+	width: 100%;
 
 	&.show {
 		opacity: 1;
@@ -246,7 +309,7 @@ and more scalable.
 	}
 
 	li {
-	border-bottom: 1px solid white;
+	border-bottom: 0px solid white;
 	text-align: center;
 
 		a {
@@ -319,7 +382,7 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 1.5em;
+	width: 100%;
 }
 
 		.hentry {
@@ -975,8 +1038,8 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
-	color: $light-gray;
+	background-color: $primary;
+	color: $white;
 }
 
 	/*

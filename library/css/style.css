@@ -1723,7 +1723,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #5c6b80;
-  background-color: #eaedf2;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1799,13 +1799,17 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #f01d4f;
+  color: #242263;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  text-decoration: none;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
 
 a:hover, a:focus, a:visited:hover, a:visited:focus {
-  color: #d10e3c; }
+  color: #181641;
+  border-bottom: 2px solid #181641; }
 
 a:link, a:visited:link {
   /*
@@ -1856,13 +1860,52 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #000; }
+  background-color: transparent; }
 
 #logo {
-  margin: 0.75em 0; }
+  margin: 0.75em 0;
+  text-align: center;
+  top: 160px;
+  position: relative; }
 
 #logo a {
-  color: #fff; }
+  color: #fff;
+  text-decoration: none; }
+
+#logo a:hover {
+  text-decoration: none;
+  border-bottom: 0px; }
+
+.top-half {
+  background-image: url("../images/header-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1220px; }
+
+#target-balloon {
+  display: inline-block; }
+
+#kite, #balloon, #bird-1, #bird-2, #bird-3 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  display: inline-block;
+  border-top: 3px solid white; }
+
+#kite {
+  top: 120px;
+  left: 250px; }
+
+#balloon {
+  opacity: 0;
+  top: -370px;
+  left: 650px;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s; }
+
+#balloon.show {
+  opacity: 1; }
 
 /*********************
 NAVIGATION STYLES
@@ -1875,17 +1918,26 @@ the navs on the site so our css is cleaner
 and more scalable.
 
 */
+.header-nav {
+  position: absolute;
+  width: 100%;
+  background-color: #2B4486;
+  z-index: 50; }
+
 #mobile-nav {
   text-align: center;
-  margin-bottom: 1em;
-  margin-top: -2em;
+  margin-bottom: 0em;
+  margin-top: 0em;
+  padding: .5em;
   -webkit-transition: all .5s;
-  transition: all .5s; }
+  transition: all .5s;
+  position: relative;
+  z-index: 99; }
 
 #mobile-nav.show {
   margin-top: 0em;
-  padding: .5em;
-  background-color: white; }
+  -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); }
 
 #mobile-nav.show:after {
   content: "\f106";
@@ -1915,6 +1967,7 @@ and more scalable.
   height: 0;
   -webkit-transition: all .5s;
   transition: all .5s;
+  width: 100%;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */ }
@@ -1924,7 +1977,7 @@ and more scalable.
   height: 100%; }
 
 .nav li {
-  border-bottom: 1px solid white;
+  border-bottom: 0px solid white;
   text-align: center;
   /*
 		so you really have to rethink your dropdowns for mobile.
@@ -1955,7 +2008,7 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 1.5em; }
+  width: 100%; }
 
 .hentry {
   background-color: #fff;
@@ -2356,8 +2409,8 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #000;
-  color: #f8f9fa; }
+  background-color: #242263;
+  color: #fff; }
 
 /*
 	if you checked out the link above:
@@ -2513,8 +2566,8 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/ }
   .nav li a:hover, .nav li a:focus {
-    color: #fff;
-    text-decoration: underline; }
+    color: #242263;
+    text-decoration: none; }
   .nav li ul.sub-menu,
   .nav li ul.children {
     margin-top: 0;

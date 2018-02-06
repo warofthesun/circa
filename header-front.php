@@ -1,5 +1,5 @@
 <!doctype html>
-
+<!--header-front-->
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
@@ -66,21 +66,94 @@
 			</div>
 		</div>
 		<div id="container">
-			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			<div class="top-half">
+				<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-				<div id="inner-header" class="wrap cf row">
-
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization">
-						<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png"></a>
-					</p>
-
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
+					<div id="inner-header" class="wrap cf row">
 
 
+						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization">
+							<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png"></a>
+						</p>
 
-				</div>
+							<div id="bird-1"></div>
 
-			</header>
+
+							<div id="kite"></div>
+
+							<div id="target-balloon">
+								<div id="balloon"></div>
+							</div>
+
+
+
+					</div>
+
+				</header>
+				<script>
+				jQuery(function ($) { // wait for document ready
+						var kitepath = {
+							entry : {
+								curviness: 3.0,
+								autoRotate: false,
+								values: [
+									{x: -50,	y: 0},
+										{x: -500,	y: -800}
+									]
+							},
+						};
+						// init controller
+						var controller = new ScrollMagic.Controller();
+
+						// create tween
+						var tween = new TimelineMax()
+							.add(TweenMax.to($("#kite"), 1, {css:{bezier:kitepath.entry}, ease:Power2.easeInOut}))
+
+						// build scene
+						var scene = new ScrollMagic.Scene({
+							triggerElement: "#trigger",
+							duration: '40%',
+							offset: 0
+						})
+										.setPin("#kite")
+										.setTween(tween)
+										.addIndicators({
+											name: "Kite"
+										}) // add indicators (requires plugin)
+										.addTo(controller);
+
+
+
+						// start balloon animation
+
+						var balloonpath = {
+							entry : {
+								curviness: 1.0,
+								values: [
+
+										{x: 0,	y: -100}
+									]
+							},
+
+
+						};
+						// init controller
+						var controller = new ScrollMagic.Controller();
+
+						// create tween
+						var tween = new TimelineMax()
+							.add(TweenMax.to($("#balloon"), 1, {css:{bezier:balloonpath.entry}, ease:Power1.easeIn}));
+
+
+
+						// build scene
+						var scene2 = new ScrollMagic.Scene({triggerElement: "#target-balloon", duration: 400, offset: 100})
+										.setPin("#target-balloon")
+										.setTween(tween)
+										.addIndicators({name: "Balloon"}) // add indicators (requires plugin)
+										.addTo(controller);
+
+						$("#balloon").addClass("show");
+					})
+				</script>
+			</div>

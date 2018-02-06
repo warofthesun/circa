@@ -283,8 +283,8 @@ NAVIGATION STYLES
 			*/ }
 
 .nav li a:hover, .nav li a:focus {
-  color: #fff;
-  text-decoration: underline; }
+  color: #242263;
+  text-decoration: none; }
 
 .nav li ul.sub-menu,
 .nav li ul.children {

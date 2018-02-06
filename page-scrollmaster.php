@@ -10,8 +10,8 @@
 
 				<div id="inner-content" class="wrap cf">
 							<div id="example-wrapper">
-								<div class="scrollContent">
-									<section class="demo" id="bezier">
+								<div>
+									<section>
 										<div class="spacer s2"></div>
 										<div class="spacer s2"></div>
 										<div id="target">
@@ -72,7 +72,7 @@
 
 
 									</section>
-									<div class="spacer s_viewport"></div>
+									<div class=""></div>
 								</div>
 							</div>
 

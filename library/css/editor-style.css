@@ -619,12 +619,12 @@ body#tinymce.wp-editor p {
   hyphenate-lines: 3; }
 
 body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
-  color: #f01d4f;
+  color: #242263;
   /* on hover */
   /* on click */ }
 
 body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:visited:hover, body#tinymce.wp-editor a:visited:focus {
-  color: #d10e3c; }
+  color: #181641; }
 
 body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
