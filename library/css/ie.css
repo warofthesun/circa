@@ -251,7 +251,7 @@ GENERAL STYLES
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 760px; }
+  width: 65em; }
 
 /*********************
 HEADER STYLES
@@ -386,7 +386,7 @@ be seen on the Desktop.
 
 ******************************************************************/
 .wrap {
-  width: 1040px; }
+  width: 85em; }
 
 /*
 you can call the larger styles if you want, but there's really no need

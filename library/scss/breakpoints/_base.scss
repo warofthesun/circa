@@ -23,6 +23,7 @@ body {
 	background-color: $white;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
 }
 
 img {
@@ -204,6 +205,35 @@ HEADER STYLES
 		height: 1220px;
 	}
 
+.overview {
+	background-color: $primary;
+	padding: 2em;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  text-align: center;
+  height: 140px;
+  justify-content: center;
+  align-items: center;
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+
+	&-content {
+		background-color: $primary;
+		width: 640px;
+		position: absolute;
+		padding: 2em;
+		border-radius: 320px / 140px;
+		height: 300px;
+		justify-content: center;
+		align-items: center;
+		color: $white;
+		margin-right: 0 !important;
+		margin-left: 0 !important;
+	}
+}
+
+
 
 	#target-balloon {
 		display: inline-block;
@@ -220,20 +250,43 @@ HEADER STYLES
 	}
 
 #kite {
-	top: 120px;
-	left: 250px;
+	top: 360px;
+	left: 30%;
+	position: absolute;
 
 }
 
 #balloon {
-	opacity: 0;
-	top: -370px;
-	left: 650px;
+	opacity: 1;
+	top: 105px;
+	left: 62%;
+	position: absolute;
 	transition: opacity .5s;
 
 	&.show {
 		opacity: 1;
 	}
+}
+
+#bird-1 {
+	position: absolute;
+	top: 150px;
+	left: 60%;
+}
+
+#bird-2 {
+	position: absolute;
+	top: 300px;
+	left: 40%;
+}
+
+#header-graf {
+	position: relative;
+	top: 700px;
+}
+
+.header-graf {
+	text-align: center;
 }
 
 
@@ -380,6 +433,20 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+
+.home {
+	#content {
+		margin-top: 250px;
+	}
+}
+
+.front-page {
+	#inner-content {
+		&.row {
+			flex-direction: column;
+		}
+	}
+}
 
 #content {
 	width: 100%;

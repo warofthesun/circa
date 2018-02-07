@@ -70,26 +70,39 @@
 				<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 					<div id="inner-header" class="wrap cf row">
-
-
+						<div id=trigger-bird-1>
+							<div id="bird-1"></div>
+						</div>
+						<div id=trigger-kite>
+							<div id="kite"></div>
+						</div>
 						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization">
 							<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png"></a>
 						</p>
 
-							<div id="bird-1"></div>
+						<div id=trigger-bird-2>
+							<div id="bird-2"></div>
+						</div>
 
 
-							<div id="kite"></div>
-
-							<div id="target-balloon">
-								<div id="balloon"></div>
-							</div>
-
-
+						<div id=trigger-balloon>
+							<div id="balloon"></div>
+						</div>
 
 					</div>
-
+					<div class="row wrap" id="header-graf">
+						<div class="col-xs-0 col-sm-1 cf"></div>
+						<div class="col-xs-12  col-sm-10 cf">
+							<div class="row">
+								<div class="col-xs-12 cf header-graf">
+									Nullam sagittis auctor mauris ut fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-0 col-sm-1 cf"></div>
+					</div>
 				</header>
+
 				<script>
 				jQuery(function ($) { // wait for document ready
 						var kitepath = {
@@ -97,63 +110,150 @@
 								curviness: 3.0,
 								autoRotate: false,
 								values: [
-									{x: -50,	y: 0},
-										{x: -500,	y: -800}
+										{x: 0,	y: 0},
+										{x: 200,	y: 50},
+										{x: 100,	y: -250},
+										{x: -600,	y: -400}
 									]
 							},
 						};
-						// init controller
-						var controller = new ScrollMagic.Controller();
-
-						// create tween
-						var tween = new TimelineMax()
-							.add(TweenMax.to($("#kite"), 1, {css:{bezier:kitepath.entry}, ease:Power2.easeInOut}))
-
-						// build scene
-						var scene = new ScrollMagic.Scene({
-							triggerElement: "#trigger",
-							duration: '40%',
-							offset: 0
-						})
-										.setPin("#kite")
-										.setTween(tween)
-										.addIndicators({
-											name: "Kite"
-										}) // add indicators (requires plugin)
-										.addTo(controller);
-
-
-
-						// start balloon animation
 
 						var balloonpath = {
 							entry : {
-								curviness: 1.0,
+								curviness: 3.0,
+								autoRotate: false,
 								values: [
+										{x: -5,	y: 100},
+										{x: 10,	y: 100},
+										{x: -10,	y: 200}
 
-										{x: 0,	y: -100}
+
 									]
 							},
-
-
 						};
+
+						var bird1path = {
+							entry : {
+								curviness: 3.0,
+								autoRotate: false,
+								values: [
+
+									{x: 600,	y: -400}
+
+
+									]
+							},
+						};
+
+						var bird2path = {
+							entry : {
+								curviness: 3.0,
+								autoRotate: false,
+								values: [
+
+
+									{x: -1600,	y: -400}
+
+
+									]
+							},
+						};
+
 						// init controller
 						var controller = new ScrollMagic.Controller();
 
-						// create tween
-						var tween = new TimelineMax()
-							.add(TweenMax.to($("#balloon"), 1, {css:{bezier:balloonpath.entry}, ease:Power1.easeIn}));
+								// create tween
+								var logoTween = new TimelineMax()
+									.add(TweenMax.to($("#logo"), 2.5, {ease:Power2.easeInOut}))
+
+								// pin the logo
+								var pinIntroScene = new ScrollMagic.Scene({
+									triggerElement: '#logo',
+									triggerHook: 0.2,
+									duration: '30%'
+								})
+								.setPin('#logo', {pushFollowers: false})
+								.setTween(logoTween)
+								.addIndicators({
+									name: "logo"
+								}) // add indicators (requires plugin)
+								.addTo(controller);
+
+								// create bird1 tween
+								var tweenBird1 = new TimelineMax()
+									.add(TweenMax.to($("#bird-1"), 1, {css:{bezier:bird1path.entry}, ease:Power1.easeInOut}))
+
+								//build Bird 1 Scene
+								var sceneBird1 = new ScrollMagic.Scene({
+									triggerElement: "#trigger",
+									duration: '30%',
+									offset: 0
+								})
+								.setPin("#trigger-bird-1", {pushFollowers: false})
+								.setTween(tweenBird1)
+								.addIndicators({
+									name: "bird-1",
+									indent: 100
+								}) // add indicators (requires plugin)
+								.addTo(controller);
+
+								// create bird2 tween
+								var tweenBird2 = new TimelineMax()
+									.add(TweenMax.to($("#bird-2"), 1, {css:{bezier:bird2path.entry}, ease:Power1.easeInOut}))
+
+								//build Bird 2 Scene
+								var sceneBird2 = new ScrollMagic.Scene({
+									triggerElement: "#trigger",
+									duration: '30%',
+									offset: 0
+								})
+								.setPin("#trigger-bird-2", {pushFollowers: false})
+								.setTween(tweenBird2)
+								.addIndicators({
+									name: "bird-2",
+									indent: 100
+								}) // add indicators (requires plugin)
+								.addTo(controller);
+
+								//build balloon Scene
+								var sceneBalloon = new ScrollMagic.Scene({
+									triggerElement: "#trigger",
+									duration: '70%',
+									offset: 150
+								})
+								.setPin("#trigger-balloon", {pushFollowers: false})
+								.setTween(tween)
+								.addIndicators({
+									name: "balloon",
+									color: "#fff"
+								}) // add indicators (requires plugin)
+								.addTo(controller);
 
 
+								// create tween
+								var tween = new TimelineMax()
+									.add(TweenMax.to($("#kite"), 1, {css:{bezier:kitepath.entry}, ease:Power2.easeOutCirc}))
+									.add(TweenMax.to($("#balloon"), 1, {css:{bezier:balloonpath.entry}, ease:Power1.easeInOut}))
 
-						// build scene
-						var scene2 = new ScrollMagic.Scene({triggerElement: "#target-balloon", duration: 400, offset: 100})
-										.setPin("#target-balloon")
-										.setTween(tween)
-										.addIndicators({name: "Balloon"}) // add indicators (requires plugin)
-										.addTo(controller);
 
-						$("#balloon").addClass("show");
+								// build kite scene
+								var scene = new ScrollMagic.Scene({
+									triggerElement: "#trigger",
+									duration: '70%',
+									offset: 10
+								})
+								.setPin("#trigger", {pushFollowers: false})
+								.setTween(tween)
+								.addIndicators({
+									name: "Kite"
+								}) // add indicators (requires plugin)
+								.addTo(controller);
+
 					})
 				</script>
+			</div>
+			<div class="overview row">
+				<div class="overview-content row">
+					Nullam sagittis auctor mauris ut fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque id dapibus orci, nec luctus nisi. accumsan fringilla magna. Aenean sit amet odio ante. Donec pharetra nisi ut hendrerit congue.
+				</div>
 			</div>

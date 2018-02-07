@@ -84,6 +84,12 @@
   max-width: 100%;
 }
 
+.col-xs-0 {
+  -ms-flex-preferred-size: 0%;
+  flex-basis: 0%;
+  max-width: 0%;
+}
+
 .col-xs-1 {
   -ms-flex-preferred-size: 8.33333333%;
   flex-basis: 8.33333333%;
