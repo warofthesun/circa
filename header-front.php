@@ -35,17 +35,13 @@
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
-		<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-		<script>
-      window.sr = ScrollReveal({ duration: 600, reset: true, easing: 'ease-in', scale: .98, distance:'50px'});
-    </script>
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
-		<div class="header-nav">
+		<div class="header-nav header-nav-front">
 			<nav role="navigation" class="wrap row" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<?php wp_nav_menu(array(
 										 'container' => false,                           // remove nav container

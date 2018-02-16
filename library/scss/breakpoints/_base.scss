@@ -135,6 +135,7 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
 	font-weight: 500;
+	font-family: $display;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -147,8 +148,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.5em;
+	font-size: 2em;
 	line-height: 1.333em;
+	color: $primary;
 }
 
 h2, .h2 {
@@ -206,8 +208,13 @@ HEADER STYLES
 	.top-half {
 		background-image: url('../images/background.jpg');
 		background-repeat-x: repeat;
-		background-size: contain;
+		background-size: cover;
 		height: 100vh;
+
+		#inner-header {
+			background-image: none;
+		}
+
 	}
 
 .overview {
@@ -363,6 +370,22 @@ and more scalable.
 
 */
 
+
+.menu-divider-item {
+	height: 200px;
+  position: relative;
+  margin: 0 auto;
+  background-color: $primary-light;
+  border-radius: 360px /100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -180%;
+  margin-bottom: -150px;
+  width: 50%;
+  padding-top: 80px;
+}
+
 .header-nav {
 	position: absolute;
 	width: 100%;
@@ -415,6 +438,7 @@ and more scalable.
 	height: 0;
 	transition: all .5s;
 	width: 100%;
+	justify-content: space-evenly;
 
 	&.show {
 		opacity: 1;
@@ -430,6 +454,8 @@ and more scalable.
 			color: $white;
 			text-decoration: none;
 			padding: 0.75em;
+			font-family: $display;
+			text-transform: uppercase;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -500,7 +526,22 @@ POSTS & CONTENT STYLES
 	}
 }
 
+#inner-header {
+
+		background-image: url("../images/background.jpg");
+		background-repeat-x:repeat;
+		background-repeat-y:no-repeat;
+
+
+	#inner-content {
+		padding-top: 10em;
+	}
+}
+
+
+
 .front-page {
+
 	#inner-content {
 		&.row {
 			flex-direction: column;
@@ -510,16 +551,17 @@ POSTS & CONTENT STYLES
 
 #content {
 	width: 100%;
+	min-height: 95vh;
 }
 
 		.hentry {
-			background-color: $white;
+			background-color: transparent;
 			border-radius: 3px;
 			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
+			border: 0px solid $border-color;
 
 			header {
-				border-bottom: 1px solid $light-gray;
+				border-bottom: 0px solid $light-gray;
 				padding: 1.5em;
 			}
 

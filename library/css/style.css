@@ -1838,6 +1838,7 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   font-weight: 500;
+  font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1848,8 +1849,9 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none; }
 
 h1, .h1 {
-  font-size: 2.5em;
-  line-height: 1.333em; }
+  font-size: 2em;
+  line-height: 1.333em;
+  color: #242263; }
 
 h2, .h2 {
   font-size: 1.75em;
@@ -1896,8 +1898,11 @@ HEADER STYLES
 .top-half {
   background-image: url("../images/background.jpg");
   background-repeat-x: repeat;
-  background-size: contain;
+  background-size: cover;
   height: 100vh; }
+
+.top-half #inner-header {
+  background-image: none; }
 
 .overview {
   background-color: #242263;
@@ -2038,6 +2043,26 @@ the navs on the site so our css is cleaner
 and more scalable.
 
 */
+.menu-divider-item {
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+  background-color: #2B4486;
+  border-radius: 360px /100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: -180%;
+  margin-bottom: -150px;
+  width: 50%;
+  padding-top: 80px; }
+
 .header-nav {
   position: absolute;
   width: 100%;
@@ -2088,6 +2113,9 @@ and more scalable.
   -webkit-transition: all .5s;
   transition: all .5s;
   width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */ }
@@ -2112,6 +2140,8 @@ and more scalable.
   color: #fff;
   text-decoration: none;
   padding: 0.75em;
+  font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
   /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -2130,6 +2160,14 @@ POSTS & CONTENT STYLES
 .home #content {
   padding-top: 250px; }
 
+#inner-header {
+  background-image: url("../images/background.jpg");
+  background-repeat-x: repeat;
+  background-repeat-y: no-repeat; }
+
+#inner-header #inner-content {
+  padding-top: 10em; }
+
 .front-page #inner-content.row {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -2137,16 +2175,17 @@ POSTS & CONTENT STYLES
           flex-direction: column; }
 
 #content {
-  width: 100%; }
+  width: 100%;
+  min-height: 95vh; }
 
 .hentry {
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 3px;
   margin-bottom: 1.5em;
-  border: 1px solid #ccc; }
+  border: 0px solid #ccc; }
 
 .hentry header {
-  border-bottom: 1px solid #f8f9fa;
+  border-bottom: 0px solid #f8f9fa;
   padding: 1.5em; }
 
 .hentry footer {
@@ -2678,6 +2717,8 @@ LAYOUT & GRID STYLES
   /*********************
 HEADER STYLES
 *********************/
+  .top-half {
+    background-size: contain; }
   /*********************
 NAVIGATION STYLES
 *********************/
@@ -2799,7 +2840,7 @@ be seen on the Desktop.
 
 ******************************************************************/
   .wrap {
-    width: 85em; } }
+    width: 75em; } }
 
 /*********************
 LARGE VIEWING SIZE

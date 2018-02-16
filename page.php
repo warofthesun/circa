@@ -25,6 +25,7 @@
 
 									<?php the_content(); ?>
 									
+
 								</section> <?php // end article section ?>
 
 								<footer class="article-footer cf">

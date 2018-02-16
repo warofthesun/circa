@@ -111,15 +111,6 @@ Uncomment  the below to exclude first section from animation
 */
 
 
-//sr.reveal('.single-post:not(:first-child)');
-
-sr.reveal('.single-post');
-
-
-
-
-
-
 
 
 /*
@@ -250,7 +241,7 @@ jQuery(document).ready(function($) {
 						duration: '30%',
 						offset: 1
 					})
-					.setPin('.header-nav', {pushFollowers: false})
+					.setPin('.header-nav-front', {pushFollowers: false})
 
 					.addTo(controller);
 

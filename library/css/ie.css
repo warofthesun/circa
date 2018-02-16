@@ -269,6 +269,9 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER STYLES
 *********************/
+.top-half {
+  background-size: contain; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -399,7 +402,7 @@ be seen on the Desktop.
 
 ******************************************************************/
 .wrap {
-  width: 85em; }
+  width: 75em; }
 
 /*
 you can call the larger styles if you want, but there's really no need
