@@ -28,7 +28,13 @@
 
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
-		
+		<script type="text/javascript">
+					jQuery(document).ready(function($) {
+
+						$(' #staff-blocks > div > .block ').each( function() { $(this).hoverdir(); } );
+
+					});
+				</script>
 		<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 
 	</body>

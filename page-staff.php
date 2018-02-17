@@ -21,35 +21,45 @@
 									<h1 class="page-title"><?php the_title(); ?></h1>
 
 								</header>
+
+
 								<section class="entry-content cf" itemprop="articleBody">
 
 									<?php	the_content(); ?>
-									<div class="col-xs-12 col-md-10 row cf" style="background-color:white;margin:0 auto;padding:0;justify-content:space-between;">
-										<div class="col-xs-12 col-sm-4" style="background-color:blue;height:400px;">
-											<div class="col-xs-12" style="background-color:red;height:59%;margin-bottom:3%;">
-												hey
+									<div class="col-xs-12 col-sm-11 col-md-10 row cf staff-blocks" id="staff-blocks">
+										<div class="col-xs-12 col-sm-4 block-column">
+											<div class="col-xs-12 block size-2" style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/images/images/4.jpg);">
+												<a href="http://dribbble.com/shots/503731-Gallery-of-Mo-2-Mo-logo">
+													<div><span>Gallery of Mo 2.Mo logo by Adam Campion</span></div>
+												</a>
 											</div>
-											<div class="col-xs-12" style="background-color:white;height:38%;">
-												hey
+											<div class="col-xs-12 block size-1" style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/images/images/1.jpg);">
+												<a href="http://dribbble.com/shots/503731-Gallery-of-Mo-2-Mo-logo">
+													<div><span>Gallery of Mo 2.Mo logo by Adam Campion</span></div>
+												</a>
 											</div>
 										</div>
-										<div class="col-xs-12 col-sm-4" style="background-color:red;height:400px;">
-											center
-										</div>
-										<div class="col-xs-12 col-sm-4" style="background-color:green;height:400px;">
-											<div class="col-xs-12" style="background-color:white;height:38%;margin-bottom:3%;">
-												hey
+										<div class="col-xs-12 col-sm-4 block-column">
+											<div class="col-xs-12 block size-3" style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/images/images/4.jpg);">
+												<a href="http://dribbble.com/shots/503731-Gallery-of-Mo-2-Mo-logo">
+													<div><span>Gallery of Mo 2.Mo logo by Adam Campion</span></div>
+												</a>
 											</div>
-											<div class="col-xs-12" style="background-color:red;height:59%;">
-												hey
-											</div>
-
 										</div>
-
+										<div class="col-xs-12 col-sm-4 block-column">
+											<div class="col-xs-12 block size-1" style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/images/images/3.jpg);">
+												<a href="http://dribbble.com/shots/503731-Gallery-of-Mo-2-Mo-logo">
+													<div><span>Gallery of Mo 2.Mo logo by Adam Campion</span></div>
+												</a>
+											</div>
+											<div class="col-xs-12 block size-2" style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/images/images/5.jpg);">
+												<a href="http://dribbble.com/shots/503731-Gallery-of-Mo-2-Mo-logo">
+													<div><span>Gallery of Mo 2.Mo logo by Adam Campion</span></div>
+												</a>
+											</div>
+										</div>
 									</div>
-
 								</section>
-
 
 							</article>
 

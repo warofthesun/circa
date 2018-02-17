@@ -2032,6 +2032,72 @@ HEADER STYLES
 .research-projects p {
   height: 100%; }
 
+/**************
+STAFF LANDING PAGE STYLES
+***************/
+.staff-blocks {
+  margin: 0 auto !important;
+  padding: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.staff-blocks .block-column {
+  height: 450px;
+  margin-bottom: 1rem; }
+
+.staff-blocks .block {
+  position: relative;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  padding: 0; }
+
+.staff-blocks .block.size-1 {
+  height: 38%; }
+
+.staff-blocks .block.size-2 {
+  height: 58%; }
+
+.staff-blocks .block.size-3 {
+  height: 100%; }
+
+.staff-blocks .block a, .staff-blocks .block a img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative; }
+
+.staff-blocks .block a:hover, .staff-blocks .block a img:hover {
+  border-bottom: 0px; }
+
+.staff-blocks .block a div, .staff-blocks .block a img div {
+  position: absolute;
+  background: #333;
+  background: rgba(75, 75, 75, 0.7);
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.staff-blocks .block a div span, .staff-blocks .block a img div span {
+  display: block;
+  padding: 10px 0;
+  margin: 40px 20px 20px 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
 /*********************
 NAVIGATION STYLES
 *********************/

@@ -128,6 +128,8 @@ a, a:visited {
 	}
 }
 
+
+
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
@@ -257,16 +259,14 @@ HEADER STYLES
 	}
 }
 
+#target-balloon {
+	display: inline-block;
+}
 
-
-	#target-balloon {
-		display: inline-block;
-	}
-
-	#kite, #balloon, #bird-1, #bird-2, #bird-3, #flock-1, #flock-2 {
-		position: absolute;
-		display: inline-block;
-	}
+#kite, #balloon, #bird-1, #bird-2, #bird-3, #flock-1, #flock-2 {
+	position: absolute;
+	display: inline-block;
+}
 
 #kite {
 	top: 410px;
@@ -352,9 +352,77 @@ HEADER STYLES
 			height: 100%;
 		}
 
-
-
 }
+
+/**************
+STAFF LANDING PAGE STYLES
+***************/
+
+.staff-blocks {
+  margin:0 auto !important;
+  padding:0;
+  justify-content:space-between;
+
+  .block-column {
+    height: 450px;
+    margin-bottom: 1rem;
+  }
+
+  .block {
+  	position: relative;
+    margin-bottom: 1rem;
+  	overflow: hidden;
+    padding:0;
+
+    &.size-1 {
+      height:38%;
+    }
+
+    &.size-2 {
+      height:58%;
+    }
+
+    &.size-3 {
+      height:100%;
+    }
+
+    a, a img {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+
+    &:hover {
+      border-bottom: 0px;
+    }
+
+    div {
+      position: absolute;
+    	background: #333;
+    	background: rgba(75,75,75,0.7);
+    	width: 100%;
+    	height: 100%;
+      left: -100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        display: block;
+      	padding: 10px 0;
+      	margin: 40px 20px 20px 20px;
+      	text-transform: uppercase;
+      	font-weight: normal;
+      	color: rgba(255,255,255,0.9);
+        text-align: center;
+        font-family: $display;
+        }
+      }
+    }
+  }
+}
+
 
 
 /*********************
@@ -426,7 +494,6 @@ and more scalable.
 	}
 
 }
-
 
 
 .nav {
