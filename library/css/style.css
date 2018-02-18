@@ -1856,14 +1856,13 @@ h1, .h1 {
 h2, .h2 {
   font-size: 1.2em;
   line-height: 1.4em;
-  margin-bottom: 0.375em;
-  text-transform: uppercase; }
+  margin-bottom: 0.375em; }
 
 h3, .h3 {
   font-size: 1.125em; }
 
 h4, .h4 {
-  font-size: 1.1em;
+  font-size: 1.0em;
   font-weight: 700; }
 
 h5, .h5 {
@@ -2041,46 +2040,46 @@ HEADER STYLES
 /**************
 STAFF LANDING PAGE STYLES
 ***************/
-.staff-blocks {
+.staff-blocks, .staff-groups {
   margin: 0 auto !important;
   padding: 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-.staff-blocks .block-column {
+.staff-blocks .block-column, .staff-groups .block-column {
   height: 450px;
   margin-bottom: 1rem; }
 
-.staff-blocks .block {
+.staff-blocks .block, .staff-groups .block {
   position: relative;
   margin-bottom: 1rem;
   overflow: hidden;
   padding: 0;
   background-color: #242263; }
 
-.staff-blocks .block.size-1 {
+.staff-blocks .block.size-1, .staff-groups .block.size-1 {
   height: 38%; }
 
-.staff-blocks .block.size-2 {
+.staff-blocks .block.size-2, .staff-groups .block.size-2 {
   height: 58%;
   font-size: 1.2em; }
 
-.staff-blocks .block.size-3 {
+.staff-blocks .block.size-3, .staff-groups .block.size-3 {
   height: 100%;
   font-size: 1.5em; }
 
-.staff-blocks .block a, .staff-blocks .block a img {
+.staff-blocks .block a, .staff-blocks .block a img, .staff-groups .block a, .staff-groups .block a img {
   overflow: hidden;
   width: 100%;
   height: 100%;
   display: block;
   position: relative; }
 
-.staff-blocks .block a:hover, .staff-blocks .block a img:hover {
+.staff-blocks .block a:hover, .staff-blocks .block a img:hover, .staff-groups .block a:hover, .staff-groups .block a img:hover {
   border-bottom: 0px; }
 
-.staff-blocks .block a div, .staff-blocks .block a img div {
+.staff-blocks .block a div, .staff-blocks .block a img div, .staff-groups .block a div, .staff-groups .block a img div {
   position: absolute;
   background: #333;
   background: #242263;
@@ -2097,7 +2096,7 @@ STAFF LANDING PAGE STYLES
       -ms-flex-align: center;
           align-items: center; }
 
-.staff-blocks .block a div span, .staff-blocks .block a img div span {
+.staff-blocks .block a div span, .staff-blocks .block a img div span, .staff-groups .block a div span, .staff-groups .block a img div span {
   display: block;
   padding: 10px 0;
   margin: 20px;
@@ -2106,6 +2105,40 @@ STAFF LANDING PAGE STYLES
   color: rgba(255, 255, 255, 0.9);
   text-align: center;
   font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.staff-groups {
+  margin-bottom: 4em !important; }
+
+.staff-group {
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff; }
+
+.staff-group .staff-member {
+  margin-bottom: 2em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+
+.staff-group .staff-member h3 {
+  font-size: 1.2em; }
+
+.staff-group .staff-member h4 {
+  font-size: .9em; }
+
+.staff-group .staff-member h2, .staff-group .staff-member h3, .staff-group .staff-member h4 {
+  margin: 0;
+  color: #fff; }
+
+.staff-group .staff-member:last-child {
+  border-bottom: 0px;
+  margin-bottom: 0em; }
+
+.staff-group .staff-member img {
+  border: 1px solid #fff;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+
+.staff-group .staff-member p {
+  padding-left: .5rem; }
 
 /*********************
 NAVIGATION STYLES

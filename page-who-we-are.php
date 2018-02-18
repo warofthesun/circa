@@ -1,4 +1,4 @@
-<!--page-staff-->
+<!--page-who we are-->
 <?php get_header(); ?>
 
 			<div id="content">
@@ -26,7 +26,7 @@
 									<?php if( get_field('intro_copy') ): ?>
 										<div class="intro-copy" style="text-align:<?php the_field('intro_copy_alignment'); ?>"><?php the_field('intro_copy'); ?></div>
 									<?php endif; ?>
-									<?php $custom_query = new WP_Query('pagename=staff-page');
+									<?php $custom_query = new WP_Query('pagename=staff-content');
 									while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 											<div class="col-xs-12 col-sm-11 col-md-10 row cf staff-blocks" id="staff-blocks">
 												<div class="col-xs-12 col-sm-4 block-column">

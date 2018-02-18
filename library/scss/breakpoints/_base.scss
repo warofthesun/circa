@@ -159,7 +159,6 @@ h2, .h2 {
 	font-size: 1.2em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
-	text-transform: uppercase;
 
 }
 
@@ -168,7 +167,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-	font-size: 1.1em;
+	font-size: 1.0em;
 	font-weight: 700;
 }
 
@@ -366,7 +365,7 @@ HEADER STYLES
 STAFF LANDING PAGE STYLES
 ***************/
 
-.staff-blocks {
+.staff-blocks, .staff-groups {
   margin:0 auto !important;
   padding:0;
   justify-content:space-between;
@@ -432,6 +431,49 @@ STAFF LANDING PAGE STYLES
       }
     }
   }
+}
+
+.staff-groups {
+	margin-bottom: 4em !important;
+}
+
+.staff-group {
+	padding: 2em;
+	background-color: rgba(0,0,0,0.6);
+	color: $white;
+
+	.staff-member {
+		margin-bottom: 2em;
+		border-bottom: 1px solid rgba(0,0,0,0.3);
+
+		h3 {
+			font-size: 1.2em;
+		}
+
+		h4 {
+			font-size: .9em;
+		}
+
+		h2, h3, h4 {
+			margin:0;
+
+			color: $white;
+		}
+
+		&:last-child {
+			border-bottom: 0px;
+			margin-bottom: 0em;
+		}
+
+		img {
+			border: 1px solid $white;
+			box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+		}
+
+		p {
+			padding-left: .5rem;
+		}
+	}
 }
 
 
