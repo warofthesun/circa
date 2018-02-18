@@ -389,10 +389,12 @@ STAFF LANDING PAGE STYLES
 
     &.size-2 {
       height:58%;
+			font-size: 1.2em;
     }
 
     &.size-3 {
       height:100%;
+			font-size: 1.5em;
     }
 
     a, a img {
@@ -420,7 +422,7 @@ STAFF LANDING PAGE STYLES
       span {
         display: block;
       	padding: 10px 0;
-      	margin: 40px 20px 20px 20px;
+      	margin: 20px;
       	text-transform: uppercase;
       	font-weight: normal;
       	color: rgba(255,255,255,0.9);

@@ -44,32 +44,64 @@
 														// height = $image[2];
 													?>
 													<div class="col-xs-12 block size-2" style="background-image:url('<?php echo $image[0]; ?>');">
-														<a href="<?php echo home_url(); ?>/staff#<?php $page_link = sanitize_title_for_query( get_field('group_one_name') ); echo esc_attr( $page_link ); ?>">
+														<a href="<?php echo home_url(); ?>/our-staff#<?php $page_link = sanitize_title_for_query( get_field('group_one_name') ); echo esc_attr( $page_link ); ?>">
 															<div><span><?php the_field('group_one_name'); ?></span></div>
 														</a>
 													</div>
-													<div class="col-xs-12 block size-1" style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/images/images/1.jpg);">
-														<a href="http://dribbble.com/shots/503731-Gallery-of-Mo-2-Mo-logo">
-															<div><span>Gallery of Mo 2.Mo logo by Adam Campion</span></div>
+													<?php
+														$attachment_id = get_field('group_two_image');
+														$size = "medium"; // (thumbnail, medium, large, full or custom size)
+														$image = wp_get_attachment_image_src( $attachment_id, $size );
+														// url = $image[0];
+														// width = $image[1];
+														// height = $image[2];
+													?>
+													<div class="col-xs-12 block size-1" style="background-image:url('<?php echo $image[0]; ?>');">
+														<a href="<?php echo home_url(); ?>/our-staff#<?php $page_link = sanitize_title_for_query( get_field('group_two_name') ); echo esc_attr( $page_link ); ?>">
+															<div><span><?php the_field('group_two_name'); ?></span></div>
 														</a>
 													</div>
 												</div>
+												<?php
+													$attachment_id = get_field('group_three_image');
+													$size = "medium"; // (thumbnail, medium, large, full or custom size)
+													$image = wp_get_attachment_image_src( $attachment_id, $size );
+													// url = $image[0];
+													// width = $image[1];
+													// height = $image[2];
+												?>
 												<div class="col-xs-12 col-sm-4 block-column">
-													<div class="col-xs-12 block size-3" style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/images/images/4.jpg);">
-														<a href="http://dribbble.com/shots/503731-Gallery-of-Mo-2-Mo-logo">
-															<div><span>Gallery of Mo 2.Mo logo by Adam Campion</span></div>
+													<div class="col-xs-12 block size-3" style="background-image:url('<?php echo $image[0]; ?>');">
+														<a href="<?php echo home_url(); ?>/our-staff#<?php $page_link = sanitize_title_for_query( get_field('group_three_name') ); echo esc_attr( $page_link ); ?>">
+															<div><span><?php the_field('group_three_name'); ?></span></div>
 														</a>
 													</div>
 												</div>
+												<?php
+													$attachment_id = get_field('group_four_image');
+													$size = "medium"; // (thumbnail, medium, large, full or custom size)
+													$image = wp_get_attachment_image_src( $attachment_id, $size );
+													// url = $image[0];
+													// width = $image[1];
+													// height = $image[2];
+												?>
 												<div class="col-xs-12 col-sm-4 block-column">
-													<div class="col-xs-12 block size-1" style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/images/images/3.jpg);">
-														<a href="http://dribbble.com/shots/503731-Gallery-of-Mo-2-Mo-logo">
-															<div><span>Gallery of Mo 2.Mo logo by Adam Campion</span></div>
+													<div class="col-xs-12 block size-1" style="background-image:url('<?php echo $image[0]; ?>');">
+														<a href="<?php echo home_url(); ?>/our-staff#<?php $page_link = sanitize_title_for_query( get_field('group_four_name') ); echo esc_attr( $page_link ); ?>">
+															<div><span><?php the_field('group_four_name'); ?></span></div>
 														</a>
 													</div>
-													<div class="col-xs-12 block size-2" style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/images/images/5.jpg);">
-														<a href="http://dribbble.com/shots/503731-Gallery-of-Mo-2-Mo-logo">
-															<div><span>Gallery of Mo 2.Mo logo by Adam Campion</span></div>
+													<?php
+														$attachment_id = get_field('group_five_image');
+														$size = "medium"; // (thumbnail, medium, large, full or custom size)
+														$image = wp_get_attachment_image_src( $attachment_id, $size );
+														// url = $image[0];
+														// width = $image[1];
+														// height = $image[2];
+													?>
+													<div class="col-xs-12 block size-2" style="background-image:url('<?php echo $image[0]; ?>');">
+														<a href="<?php echo home_url(); ?>/our-staff#<?php $page_link = sanitize_title_for_query( get_field('group_five_name') ); echo esc_attr( $page_link ); ?>">
+															<div><span><?php the_field('group_five_name'); ?></span></div>
 														</a>
 													</div>
 												</div>

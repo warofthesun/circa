@@ -2063,10 +2063,12 @@ STAFF LANDING PAGE STYLES
   height: 38%; }
 
 .staff-blocks .block.size-2 {
-  height: 58%; }
+  height: 58%;
+  font-size: 1.2em; }
 
 .staff-blocks .block.size-3 {
-  height: 100%; }
+  height: 100%;
+  font-size: 1.5em; }
 
 .staff-blocks .block a, .staff-blocks .block a img {
   overflow: hidden;
@@ -2098,7 +2100,7 @@ STAFF LANDING PAGE STYLES
 .staff-blocks .block a div span, .staff-blocks .block a img div span {
   display: block;
   padding: 10px 0;
-  margin: 40px 20px 20px 20px;
+  margin: 20px;
   text-transform: uppercase;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.9);
