@@ -1839,6 +1839,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   font-weight: 500;
   font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #242263;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1850,13 +1851,13 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 
 h1, .h1 {
   font-size: 2em;
-  line-height: 1.333em;
-  color: #242263; }
+  line-height: 1.333em; }
 
 h2, .h2 {
-  font-size: 1.75em;
+  font-size: 1.2em;
   line-height: 1.4em;
-  margin-bottom: 0.375em; }
+  margin-bottom: 0.375em;
+  text-transform: uppercase; }
 
 h3, .h3 {
   font-size: 1.125em; }
@@ -1991,10 +1992,15 @@ HEADER STYLES
       -ms-flex-align: start;
           align-items: flex-start; }
 
-.header-graf {
+.header-graf, .intro-copy {
   text-align: center;
   font-size: 1.3em;
-  color: #242263; }
+  color: #242263;
+  line-height: 1.8em; }
+
+.intro-copy {
+  margin: 2em;
+  margin-bottom: 4em; }
 
 .research-projects .project {
   margin-bottom: 2em; }
@@ -2050,7 +2056,8 @@ STAFF LANDING PAGE STYLES
   position: relative;
   margin-bottom: 1rem;
   overflow: hidden;
-  padding: 0; }
+  padding: 0;
+  background-color: #242263; }
 
 .staff-blocks .block.size-1 {
   height: 38%; }
@@ -2074,7 +2081,7 @@ STAFF LANDING PAGE STYLES
 .staff-blocks .block a div, .staff-blocks .block a img div {
   position: absolute;
   background: #333;
-  background: rgba(75, 75, 75, 0.7);
+  background: #242263;
   width: 100%;
   height: 100%;
   left: -100%;
