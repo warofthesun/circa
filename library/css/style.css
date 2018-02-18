@@ -1937,6 +1937,9 @@ HEADER STYLES
   margin-right: 0 !important;
   margin-left: 0 !important; }
 
+.overview-content h1 {
+  color: #fff; }
+
 .overview-content div {
   margin-bottom: 1em;
   max-width: 500px; }
@@ -2056,7 +2059,10 @@ STAFF LANDING PAGE STYLES
   margin-bottom: 1rem;
   overflow: hidden;
   padding: 0;
-  background-color: #242263; }
+  background-color: #242263;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat; }
 
 .staff-blocks .block.size-1, .staff-groups .block.size-1 {
   height: 38%; }
@@ -2081,8 +2087,7 @@ STAFF LANDING PAGE STYLES
 
 .staff-blocks .block a div, .staff-blocks .block a img div, .staff-groups .block a div, .staff-groups .block a img div {
   position: absolute;
-  background: #333;
-  background: #242263;
+  background: rgba(36, 34, 99, 0.5);
   width: 100%;
   height: 100%;
   left: -100%;
@@ -2102,16 +2107,17 @@ STAFF LANDING PAGE STYLES
   margin: 20px;
   text-transform: uppercase;
   font-weight: normal;
-  color: rgba(255, 255, 255, 0.9);
+  color: white;
   text-align: center;
-  font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px 1px #242263; }
 
 .staff-groups {
   margin-bottom: 4em !important; }
 
 .staff-group {
   padding: 2em;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   color: #fff; }
 
 .staff-group .staff-member {
@@ -2271,7 +2277,8 @@ POSTS & CONTENT STYLES
 #inner-header {
   background-image: url("../images/background.jpg");
   background-repeat-x: repeat;
-  background-repeat-y: no-repeat; }
+  background-repeat-y: no-repeat;
+  background-attachment: fixed; }
 
 #inner-header #inner-content {
   padding-top: 10em; }

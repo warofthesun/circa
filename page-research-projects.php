@@ -1,4 +1,4 @@
-<!--page-our staff-->
+<!--page-research projects-->
 <?php get_header(); ?>
 
 			<div id="content">
@@ -27,31 +27,19 @@
 										<div class="intro-copy" style="text-align:<?php the_field('intro_copy_alignment'); ?>"><?php the_field('intro_copy'); ?></div>
 									<?php endif; ?>
 
-									<?php $custom_query = new WP_Query('pagename=staff-content');
-									while($custom_query->have_posts()) : $custom_query->the_post(); ?>
-									<?php
 
-											// check if the flexible content field has rows of data
-											if( have_rows('staff') ):
-
-										  // loop through the rows of data
-												while ( have_rows('staff') ) : the_row();
-												if( get_row_layout() == 'staff_group' ): ?>
 												<div class="col-xs-12 col-sm-11 staff-groups">
-													<a name="<?php $page_link = sanitize_title_for_query( get_sub_field('group_name') ); echo esc_attr( $page_link ); ?>"></a>
 
 
-
-
-													<h2><?php the_sub_field('group_name'); ?></h2>
 													<ul class="row cf staff-group">
 														<?php
 														//create a repeater loop
 													 	// check if the repeater field has rows of data
-														if( have_rows('staff_member') ): while ( have_rows('staff_member') ) : the_row(); ?>
+														if( have_rows('research_project') ): while ( have_rows('research_project') ) : the_row(); ?>
+														<a name="<?php $page_link = sanitize_title_for_query( get_sub_field('name') ); echo esc_attr( $page_link ); ?>"></a>
 														<li class="col-xs-12 cf row staff-member">
 															<?php
-																$attachment_id = get_sub_field('staff_member_image');
+																$attachment_id = get_sub_field('project_logo');
 																$size = "square"; // (thumbnail, medium, large, full or custom size)
 																$image = wp_get_attachment_image_src( $attachment_id, $size );
 																// url = $image[0];
@@ -63,20 +51,17 @@
 															</div>
 															<div class="col-xs-12 col-sm-10">
 																<h3 class="col-xs-12">
-																	<?php the_sub_field('name'); ?>
+																	<?php the_sub_field('project_name'); ?>
 																</h3>
-																<h4 class="col-xs-12">
-																	<?php the_sub_field('title'); ?>
-																</h4>
+
 																<p class="col-xs-12">
 																	<?php the_sub_field('description'); ?>
 																</p>
 															</div>
 															</li>
-														<?php endwhile; ?>
+														<?php endwhile; endif;?>
 														</ul>
 													</div>
-											<?php endif; endif; endwhile; endif; endwhile;?>
 
 
 									<?php wp_reset_postdata(); // reset the query ?>
