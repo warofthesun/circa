@@ -2010,6 +2010,9 @@ HEADER STYLES
   margin: 2em;
   margin-bottom: 4em; }
 
+.front-page .research-projects .project {
+  border-bottom: 0px; }
+
 .research-projects {
   padding: 2em;
   background-color: #fff; }
