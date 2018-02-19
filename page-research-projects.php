@@ -48,9 +48,9 @@
 																// height = $image[2];
 															?>
 															<?php if( get_sub_field('project_logo')): ?>
-															<a href="#" class="col-xs-4 logo">
+															<div class="col-xs-4 logo">
 																<img src="<?php echo $image[0]; ?>">
-															</a>
+															</div>
 														<?php endif; ?>
 															<div class="col-xs-7 project-staff">
 																<h2><?php the_sub_field('project_name'); ?></h2>

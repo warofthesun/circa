@@ -2011,10 +2011,18 @@ HEADER STYLES
   margin-bottom: 4em; }
 
 .research-projects {
-  padding: 2em; }
+  padding: 2em;
+  background-color: #fff; }
 
 .research-projects .project {
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid rgba(36, 34, 99, 0.4); }
+
+.research-projects .project:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0px; }
 
 .research-projects h1 {
   text-transform: uppercase;

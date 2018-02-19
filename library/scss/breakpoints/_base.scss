@@ -329,9 +329,18 @@ HEADER STYLES
 
 .research-projects {
 	padding: 2em;
+	background-color: $white;
 
 	.project {
 		margin-bottom: 2em;
+		padding-bottom: 2em;
+		border-bottom: 1px solid rgba($primary, 0.4);
+
+		&:last-child {
+			padding-bottom: 0;
+			margin-bottom: 0;
+			border-bottom: 0px;
+		}
 		}
 
 		h1 {
