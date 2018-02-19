@@ -29,57 +29,41 @@ while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			<article class="row research-projects">
 				<h1 class="col-xs-12 cf">
-					Active research projects
+					<a href="<?php echo home_url(); ?>/research-projects">Active research projects</a>
 				</h1>
-				<div class="col-xs-12 cf row">
-					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cf row project">
-						<div class="col-xs-4 logo">
-							logo
-						</div>
-						<h2 class="col-xs-7">
-							Title
-						</h2>
-						<p class="col-xs-12">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum et justo non imperdiet. Morbi consectetur at velit id tincidunt. Nunc at urna sit amet velit vehicula viverra nec cursus ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ultrices egestas leo, et semper ante accumsan pulvinar. Maecenas ullamcorper commodo ante eget fringilla. Aliquam non orci nec elit pharetra mattis. Vestibulum at nunc at lacus tincidunt tincidunt. Vestibulum aliquam posuere eleifend.
-						</p>
+				<ul class="col-xs-12 cf row">
+					<?php
+					//create a repeater loop
+					// check if the repeater field has rows of data
+					if( have_rows('research_project') ): while ( have_rows('research_project') ) : the_row(); ?>
+					<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cf row project">
+						<?php
+							$attachment_id = get_sub_field('project_logo');
+							$size = "square-nocrop"; // (thumbnail, medium, large, full or custom size)
+							$image = wp_get_attachment_image_src( $attachment_id, $size );
+							// url = $image[0];
+							// width = $image[1];
+							// height = $image[2];
+						?>
+						<?php if( get_sub_field('project_logo')): ?>
+						<a href="<?php echo home_url(); ?>/research-projects#<?php $page_link = sanitize_title_for_query( get_sub_field('project_name') ); echo esc_attr( $page_link ); ?>" class="col-xs-4 logo">
+							<img src="<?php echo $image[0]; ?>">
+						</a>
+					<?php endif; ?>
+					<div class="col-xs-7 project-staff">
+
+							<a href="<?php echo home_url(); ?>/research-projects#<?php $page_link = sanitize_title_for_query( get_sub_field('project_name') ); echo esc_attr( $page_link ); ?>" class="h2"><?php the_sub_field('project_name'); ?></a>
+
+						<h3><?php the_sub_field('project_owner'); ?></h3>
 					</div>
 
-					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cf row project">
-						<div class="col-xs-4 logo">
-							logo
+						<div class="col-xs-12 description">
+							<?php echo custom_field_excerpt(); ?>
 						</div>
-						<h2 class="col-xs-7">
-							Title
-						</h2>
-						<p class="col-xs-12">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum et justo non imperdiet. Morbi consectetur at velit id tincidunt. Nunc at urna sit amet velit vehicula viverra nec cursus ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ultrices egestas leo, et semper ante accumsan pulvinar. Maecenas ullamcorper commodo ante eget fringilla. Aliquam non orci nec elit pharetra mattis. Vestibulum at nunc at lacus tincidunt tincidunt. Vestibulum aliquam posuere eleifend.
-						</p>
-					</div>
-
-					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cf row project">
-						<div class="col-xs-4 logo">
-							logo
-						</div>
-						<h2 class="col-xs-7">
-							Title
-						</h2>
-						<p class="col-xs-12">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum et justo non imperdiet. Morbi consectetur at velit id tincidunt. Nunc at urna sit amet velit vehicula viverra nec cursus ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ultrices egestas leo, et semper ante accumsan pulvinar. Maecenas ullamcorper commodo ante eget fringilla. Aliquam non orci nec elit pharetra mattis. Vestibulum at nunc at lacus tincidunt tincidunt. Vestibulum aliquam posuere eleifend.
-						</p>
-					</div>
-
-					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cf row project">
-						<div class="col-xs-4 logo">
-							logo
-						</div>
-						<h2 class="col-xs-7">
-							Title
-						</h2>
-						<p class="col-xs-12">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum et justo non imperdiet. Morbi consectetur at velit id tincidunt. Nunc at urna sit amet velit vehicula viverra nec cursus ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ultrices egestas leo, et semper ante accumsan pulvinar. Maecenas ullamcorper commodo ante eget fringilla. Aliquam non orci nec elit pharetra mattis. Vestibulum at nunc at lacus tincidunt tincidunt. Vestibulum aliquam posuere eleifend.
-						</p>
-					</div>
-			</div>
+					</li>
+				<?php endwhile; endif; endwhile;?>
+				<?php wp_reset_postdata(); // reset the query ?>
+				</ul>
 			</article>
 		</div>
 	</div>

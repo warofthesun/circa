@@ -328,6 +328,7 @@ HEADER STYLES
 }
 
 .research-projects {
+	padding: 2em;
 
 	.project {
 		margin-bottom: 2em;
@@ -341,26 +342,50 @@ HEADER STYLES
 			font-family: $display;
 		}
 
-		h2 {
+		h2, .h2 {
+			display: block;
+			margin: 0;
+		}
+
+		h3 {
+			margin: 0;
+			font-size: .9em;
+			font-weight: 700;
+		}
+
+		.project-staff {
 			height: 125px;
 			display:flex;
-			align-items:center;
-			justify-content: flex-start;
+			align-items:flex-start;
+			justify-content: center;
 			margin: 0;
 			text-transform: uppercase;
 			font-size: 1em;
 			font-family: $display;
+			flex-direction: column;
 		}
 
 		.logo {
 			height: 125px;
-			background-color: #999;
 			flex-basis: 125px;
 			margin-right: 2em;
+			padding: 0;
+			display: flex;
+
+			img {
+				max-width: 125px;
+				height: auto;
+				margin-bottom: 0;
+				align-self:center;
+			}
 		}
 
-		p {
+		.description {
 			height: 100%;
+
+			p {
+				color: $primary;
+			}
 		}
 
 }

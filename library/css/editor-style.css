@@ -403,6 +403,12 @@ body#tinymce.wp-editor body {
 body#tinymce.wp-editor a {
   background: transparent; }
 
+body#tinymce.wp-editor a.logo:hover {
+  border-bottom: 0px !important; }
+
+body#tinymce.wp-editor a img:hover {
+  border-bottom: 0px !important; }
+
 body#tinymce.wp-editor a:focus {
   outline: thin dotted; }
 

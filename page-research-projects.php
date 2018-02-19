@@ -31,34 +31,36 @@
 												<div class="col-xs-12 col-sm-11 staff-groups">
 
 
-													<ul class="row cf staff-group">
+													<ul class="row cf research-projects">
 														<?php
 														//create a repeater loop
 													 	// check if the repeater field has rows of data
 														if( have_rows('research_project') ): while ( have_rows('research_project') ) : the_row(); ?>
-														<a name="<?php $page_link = sanitize_title_for_query( get_sub_field('name') ); echo esc_attr( $page_link ); ?>"></a>
-														<li class="col-xs-12 cf row staff-member">
+														<a name="<?php $page_link = sanitize_title_for_query( get_sub_field('project_name') ); echo esc_attr( $page_link ); ?>"></a>
+
+														<li class="col-xs-12 cf row project">
 															<?php
 																$attachment_id = get_sub_field('project_logo');
-																$size = "square"; // (thumbnail, medium, large, full or custom size)
+																$size = "square-nocrop"; // (thumbnail, medium, large, full or custom size)
 																$image = wp_get_attachment_image_src( $attachment_id, $size );
 																// url = $image[0];
 																// width = $image[1];
 																// height = $image[2];
 															?>
-															<div class="col-xs-12 col-sm-2 logo">
+															<?php if( get_sub_field('project_logo')): ?>
+															<a href="#" class="col-xs-4 logo">
 																<img src="<?php echo $image[0]; ?>">
+															</a>
+														<?php endif; ?>
+															<div class="col-xs-7 project-staff">
+																<h2><?php the_sub_field('project_name'); ?></h2>
+																<h3><?php the_sub_field('project_owner'); ?></h3>
 															</div>
-															<div class="col-xs-12 col-sm-10">
-																<h3 class="col-xs-12">
-																	<?php the_sub_field('project_name'); ?>
-																</h3>
 
-																<p class="col-xs-12">
-																	<?php the_sub_field('description'); ?>
-																</p>
+															<div class="col-xs-12 description">
+																<?php the_sub_field('description'); ?>
 															</div>
-															</li>
+														</li>
 														<?php endwhile; endif;?>
 														</ul>
 													</div>

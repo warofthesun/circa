@@ -90,6 +90,12 @@ body {
 a {
   background: transparent; }
 
+a.logo:hover {
+  border-bottom: 0px !important; }
+
+a img:hover {
+  border-bottom: 0px !important; }
+
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
@@ -2004,6 +2010,9 @@ HEADER STYLES
   margin: 2em;
   margin-bottom: 4em; }
 
+.research-projects {
+  padding: 2em; }
+
 .research-projects .project {
   margin-bottom: 2em; }
 
@@ -2014,31 +2023,57 @@ HEADER STYLES
   margin-bottom: 2em;
   font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-.research-projects h2 {
+.research-projects h2, .research-projects .h2 {
+  display: block;
+  margin: 0; }
+
+.research-projects h3 {
+  margin: 0;
+  font-size: .9em;
+  font-weight: 700; }
+
+.research-projects .project-staff {
   height: 125px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   text-transform: uppercase;
   font-size: 1em;
-  font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .research-projects .logo {
   height: 125px;
-  background-color: #999;
   -ms-flex-preferred-size: 125px;
       flex-basis: 125px;
-  margin-right: 2em; }
+  margin-right: 2em;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
-.research-projects p {
+.research-projects .logo img {
+  max-width: 125px;
+  height: auto;
+  margin-bottom: 0;
+  -ms-flex-item-align: center;
+      align-self: center; }
+
+.research-projects .description {
   height: 100%; }
+
+.research-projects .description p {
+  color: #242263; }
 
 /**************
 STAFF LANDING PAGE STYLES

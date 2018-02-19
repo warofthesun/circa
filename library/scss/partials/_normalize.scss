@@ -88,6 +88,18 @@ body {
 
 a {
     background: transparent;
+
+    &.logo {
+      &:hover {
+        border-bottom: 0px !important;
+      }
+    }
+
+    img {
+      &:hover {
+        border-bottom: 0px !important;
+      }
+    }
 }
 
 /**
