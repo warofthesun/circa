@@ -42,6 +42,9 @@
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage" id="inner-header">
 		<div class="header-nav">
+			<div id="mobile-nav">
+				Navigation
+			</div>
 			<nav role="navigation" class="wrap row" itemscope itemtype="http://schema.org/SiteNavigationElement">
 				<?php
 					$divider_html = '<a href="/" rel="nofollow"><img src="/wp-content/themes/circa-center-for-integrative-research/library/images/logo-white.png"></a>';
@@ -64,7 +67,5 @@
 					);
 					?>
 			</nav>
-			<div id="mobile-nav">
-				Navigation
-			</div>
+
 		</div>
