@@ -27,14 +27,13 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 %btn {
   display: inline-block;
   position: relative;
-  font-family: $sans-serif;
+  font-family: $display;
   text-decoration: none;
-  color: $white;
-  font-size: 0.9em;
-  font-size: 34px;
-  line-height: 34px;
+  color: $white !important;
+  font-size: 1em;
+  line-height: 1.5em;
   font-weight: normal;
-  padding: 0 24px;
+  padding: .5em 1em;
   border-radius: 4px;
   border: 0;
   cursor: pointer;
@@ -45,6 +44,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     color: $white;
     text-decoration: none;
     outline: none;
+    border-bottom: 0px;
   } // end hover
 
   // clicking on the button
@@ -59,17 +59,17 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.blue-btn {
+.blue-btn, .tribe-events-button {
   @extend %btn; // here we load the btn defaults
-  background-color: $blue;
+  background-color: $primary !important;
 
   &:hover,
   &:focus {
-    background-color: darken($blue, 4%);
+    background-color: lighten($primary, 10%) !important;
   } // end hover
 
   &:active {
-    background-color: darken($blue, 5%);
+    background-color: darken($primary, 5%) !important;
   } // end active
 
 } // end blue button

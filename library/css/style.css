@@ -1381,29 +1381,29 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.blue-btn, .comment-reply-link, #submit {
+.blue-btn, .comment-reply-link, #submit, .tribe-events-button {
   display: inline-block;
   position: relative;
-  font-family: "Arial", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
-  color: #fff;
-  font-size: 0.9em;
-  font-size: 34px;
-  line-height: 34px;
+  color: #fff !important;
+  font-size: 1em;
+  line-height: 1.5em;
   font-weight: normal;
-  padding: 0 24px;
+  padding: .5em 1em;
   border-radius: 4px;
   border: 0;
   cursor: pointer;
   -webkit-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out; }
 
-.blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+.blue-btn:hover, .comment-reply-link:hover, #submit:hover, .tribe-events-button:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus, .tribe-events-button:focus {
   color: #fff;
   text-decoration: none;
-  outline: none; }
+  outline: none;
+  border-bottom: 0px; }
 
-.blue-btn:active, .comment-reply-link:active, #submit:active {
+.blue-btn:active, .comment-reply-link:active, #submit:active, .tribe-events-button:active {
   top: 1px; }
 
 /*
@@ -1411,14 +1411,14 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.blue-btn, .comment-reply-link, #submit {
-  background-color: #2980b9; }
+.blue-btn, .comment-reply-link, #submit, .tribe-events-button {
+  background-color: #242263 !important; }
 
-.blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
-  background-color: #2574a8; }
+.blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus, .tribe-events-button:hover, .tribe-events-button:focus {
+  background-color: #322f89 !important; }
 
-.blue-btn:active, .comment-reply-link:active, #submit:active {
-  background-color: #2472a4; }
+.blue-btn:active, .comment-reply-link:active, #submit:active, .tribe-events-button:active {
+  background-color: #1d1b50 !important; }
 
 /******************************************************************
 Site Name:
@@ -2161,36 +2161,43 @@ STAFF LANDING PAGE STYLES
 .staff-groups {
   margin-bottom: 4em !important; }
 
-.staff-group {
+.staff-group, .downloads {
   padding: 2em;
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff; }
 
-.staff-group .staff-member {
+.staff-group h2, .downloads h2 {
+  color: #fff; }
+
+.staff-group .staff-member, .downloads .staff-member {
   margin-bottom: 2em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
 
-.staff-group .staff-member h3 {
+.staff-group .staff-member h3, .downloads .staff-member h3 {
   font-size: 1.2em; }
 
-.staff-group .staff-member h4 {
+.staff-group .staff-member h4, .downloads .staff-member h4 {
   font-size: .9em; }
 
-.staff-group .staff-member h2, .staff-group .staff-member h3, .staff-group .staff-member h4 {
+.staff-group .staff-member h2, .staff-group .staff-member h3, .staff-group .staff-member h4, .downloads .staff-member h2, .downloads .staff-member h3, .downloads .staff-member h4 {
   margin: 0;
   color: #fff; }
 
-.staff-group .staff-member:last-child {
+.staff-group .staff-member:last-child, .downloads .staff-member:last-child {
   border-bottom: 0px;
   margin-bottom: 0em; }
 
-.staff-group .staff-member img {
+.staff-group .staff-member img, .downloads .staff-member img {
   border: 1px solid #fff;
   -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
 
-.staff-group .staff-member p {
+.staff-group .staff-member p, .downloads .staff-member p {
   padding-left: .5rem; }
+
+#tribe-events {
+  background-color: #fff;
+  padding: 1em; }
 
 /*********************
 NAVIGATION STYLES
@@ -2875,6 +2882,8 @@ LAYOUT & GRID STYLES
     padding-right: 2em; }
   .project:nth-child(even) {
     padding-left: 2em; }
+  #tribe-events {
+    padding: 1em; }
   /*********************
 HEADER STYLES
 *********************/

@@ -114,6 +114,9 @@ new image size.
 */
 
 // Custom Excerpt function for Advanced Custom Fields
+
+
+
 function custom_field_excerpt() {
 	global $post;
 	$text = get_sub_field('description'); //Replace 'your_field_name'
@@ -128,8 +131,12 @@ function custom_field_excerpt() {
 	return apply_filters('the_excerpt', $text);
 }
 
+
+
 // TGM Plugin Activation Class
 require_once locate_template('library/tgm-plugin-activation/class-tgm-plugin-activation.php');
+
+
 
 /************* THEME CUSTOMIZE *********************/
 

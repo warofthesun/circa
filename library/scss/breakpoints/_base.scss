@@ -486,10 +486,14 @@ STAFF LANDING PAGE STYLES
 	margin-bottom: 4em !important;
 }
 
-.staff-group {
+.staff-group, .downloads {
 	padding: 2em;
 	background-color: rgba(0,0,0,0.4);
 	color: $white;
+
+	h2 {
+		color: $white;
+	}
 
 	.staff-member {
 		margin-bottom: 2em;
@@ -525,6 +529,11 @@ STAFF LANDING PAGE STYLES
 	}
 }
 
+
+#tribe-events {
+	background-color: $white;
+	padding: 1em;
+}
 
 
 /*********************

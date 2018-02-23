@@ -266,6 +266,9 @@ LAYOUT & GRID STYLES
 .project:nth-child(even) {
   padding-left: 2em; }
 
+#tribe-events {
+  padding: 1em; }
+
 /*********************
 HEADER STYLES
 *********************/
