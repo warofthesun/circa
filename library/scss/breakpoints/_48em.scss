@@ -30,6 +30,14 @@ NAVIGATION STYLES
 	display: none;
 }
 
+.header-nav {
+	flex-direction: row;
+
+	.logo {
+		order: 2;
+	}
+}
+
 .nav {
 	flex-direction: row;
 	height: auto;

@@ -2010,6 +2010,9 @@ HEADER STYLES
   margin: 2em;
   margin-bottom: 4em; }
 
+.front-page .research-projects {
+  background-color: transparent; }
+
 .front-page .research-projects .project {
   border-bottom: 0px; }
 
@@ -2210,6 +2213,11 @@ the navs on the site so our css is cleaner
 and more scalable.
 
 */
+.header-nav.header-nav-front #mobile-nav {
+  text-align: center;
+  width: 100%;
+  padding-top: 1em; }
+
 .menu-divider-item {
   height: 200px;
   position: relative;
@@ -2234,10 +2242,51 @@ and more scalable.
   position: absolute;
   width: 100%;
   background-color: #2B4486;
+  z-index: 50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.header-nav .logo {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.header-nav .logo div {
+  position: absolute;
+  background-color: #2B4486;
+  text-align: center;
+  height: 110px;
+  width: 560px;
+  border-bottom-right-radius: 35em 10em;
+  border-bottom-left-radius: 35em 10em;
+  padding-top: 1em; }
+
+.header-nav .menu-left, .header-nav .menu-right {
   z-index: 50; }
 
-#mobile-nav {
-  text-align: center;
+.header-nav .menu-left {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
+
+.header-nav .menu-right {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3; }
+
+.header-nav #mobile-nav {
+  text-align: right;
   margin-bottom: 0em;
   margin-top: 0em;
   padding: .5em;
@@ -2245,21 +2294,26 @@ and more scalable.
   transition: all .5s;
   position: relative;
   z-index: 99;
-  color: #fff; }
+  color: #fff;
+  font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 60px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5; }
 
-#mobile-nav.show {
-  margin-top: 0em;
-  -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); }
+.header-nav #mobile-nav.show {
+  margin-top: 0em; }
 
-#mobile-nav.show:after {
+.header-nav #mobile-nav.show:after {
   content: "\f106";
   text-align: center;
   width: 100%;
   display: inline;
   font-family: fontawesome; }
 
-#mobile-nav:after {
+.header-nav #mobile-nav:after {
   content: "\f107";
   text-align: center;
   width: 100%;
@@ -2326,7 +2380,8 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 .home #content {
-  padding-top: 250px; }
+  padding-top: 250px;
+  background-color: rgba(255, 255, 255, 0.8); }
 
 #inner-header:before {
   content: "";
@@ -2754,8 +2809,7 @@ FOOTER STYLES
   clear: both;
   background-color: #242263;
   color: #fff;
-  height: 300px;
-  margin-top: 4em; }
+  height: 300px; }
 
 /*
 	if you checked out the link above:
@@ -2801,6 +2855,15 @@ NAVIGATION STYLES
 *********************/
   #mobile-nav {
     display: none; }
+  .header-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .header-nav .logo {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
   .nav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

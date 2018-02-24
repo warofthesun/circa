@@ -173,6 +173,17 @@ NAVIGATION STYLES
 #mobile-nav {
   display: none; }
 
+.header-nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.header-nav .logo {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2; }
+
 .nav {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;

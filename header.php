@@ -41,31 +41,55 @@
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage" id="inner-header">
-		<div class="header-nav">
-			<div id="mobile-nav">
-				Navigation
+		<div class="header-nav col-xs-12">
+			<a href="/" rel="nofollow" class="logo col-xs-12 col-sm-4">
+				<div>
+					<img src="/wp-content/themes/circa-center-for-integrative-research/library/images/logo-white.png">
+				</div>
+			</a>
+			<div class="col-xs-12 col-sm-4 menu-left">
+				<nav role="navigation" class="row" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<?php
+						wp_nav_menu(
+							array(
+								'container' => false,                           // remove nav container
+								'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+								'menu' => __( 'The Left Menu', 'bonestheme' ),  // nav name
+								'menu_class' => 'nav top-nav cf',               // adding custom nav class
+								'theme_location' => 'main-nav-left',                 // where it's located in the theme
+								'before' => '',                                 // before the menu
+											'after' => '',                                  // after the menu
+											'link_before' => '',                            // before each link
+											'link_after' => '',                             // after each link
+											'depth' => 0,                                   // limit the depth of the nav
+								'fallback_cb' => '',                             // fallback function (if there is one)
+							)
+						);
+						?>
+				</nav>
 			</div>
-			<nav role="navigation" class="wrap row" itemscope itemtype="http://schema.org/SiteNavigationElement">
-				<?php
-					$divider_html = '<a href="/" rel="nofollow"><img src="/wp-content/themes/circa-center-for-integrative-research/library/images/logo-white.png"></a>';
-
-					wp_nav_menu(
-						array(
-							'container' => false,                           // remove nav container
-							'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-							'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-							'menu_class' => 'nav top-nav cf',               // adding custom nav class
-							'theme_location' => 'main-nav',                 // where it's located in the theme
-							'before' => '',                                 // before the menu
-										'after' => '',                                  // after the menu
-										'link_before' => '',                            // before each link
-										'link_after' => '',                             // after each link
-										'depth' => 0,                                   // limit the depth of the nav
-							'fallback_cb' => '',                             // fallback function (if there is one)
-							'divider_html' => $divider_html
-						)
-					);
-					?>
-			</nav>
-
+			<div class="col-xs-12 col-sm-4 menu-right">
+					<nav role="navigation" class="row" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<?php
+						wp_nav_menu(
+							array(
+								'container' => false,                           // remove nav container
+								'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+								'menu' => __( 'The Right Menu', 'bonestheme' ),  // nav name
+								'menu_class' => 'nav top-nav cf',               // adding custom nav class
+								'theme_location' => 'main-nav-right',                 // where it's located in the theme
+								'before' => '',                                 // before the menu
+											'after' => '',                                  // after the menu
+											'link_before' => '',                            // before each link
+											'link_after' => '',                             // after each link
+											'depth' => 0,                                   // limit the depth of the nav
+								'fallback_cb' => '',                             // fallback function (if there is one)
+							)
+						);
+						?>
+				</nav>
+			</div>
+			<div id="mobile-nav" class="col-xs-4">
+				Menu
+			</div>
 		</div>

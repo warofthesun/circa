@@ -58,7 +58,7 @@
 					)); ?>
 			</nav>
 			<div id="mobile-nav">
-				Navigation
+				Menu
 			</div>
 		</div>
 		<div id="container">

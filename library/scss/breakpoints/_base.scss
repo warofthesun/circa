@@ -329,6 +329,7 @@ HEADER STYLES
 
 .front-page {
 	.research-projects {
+		background-color: transparent;
 		.project {
 			border-bottom: 0px;
 		}
@@ -549,6 +550,16 @@ and more scalable.
 
 */
 
+.header-nav {
+	&.header-nav-front {
+		#mobile-nav {
+			text-align: center;
+			width: 100%;
+			padding-top: 1em;
+		}
+	}
+}
+
 
 .menu-divider-item {
 	height: 200px;
@@ -570,42 +581,80 @@ and more scalable.
 	width: 100%;
 	background-color: $primary-light;
 	z-index: 50;
-}
-#mobile-nav {
-	text-align: center;
-	margin-bottom: 0em;
-	margin-top:0em;
-	padding: .5em;
-	transition: all .5s;
-	position: relative;
-	z-index: 99;
-	color: $white;
+	display: flex;
+	flex-direction: column;
 
-	&.show {
-		margin-top: 0em;
+	.logo {
+		order: 4;
+		display: flex;
+		justify-content: center;
 
-		box-shadow: 0px 4px 6px rgba(0,0,0,0.5);
+		div {
+			position: absolute;
+    	background-color: $primary-light;
+	    text-align: center;
+    	height: 110px;
+    	width: 560px;
+    	border-bottom-right-radius: 35em 10em;
+    	border-bottom-left-radius: 35em 10em;
+			padding-top: 1em;
+		}
+	}
+
+	.menu-left, .menu-right {
+		z-index: 50;
+	}
+
+	.menu-left {
+		order: 1;
+	}
+
+	.menu-right {
+		order: 3;
+	}
+
+
+	#mobile-nav {
+		text-align: right;
+		margin-bottom: 0em;
+		margin-top:0em;
+		padding: .5em;
+		transition: all .5s;
+		position: relative;
+		z-index: 99;
+		color: $white;
+		font-family: $display;
+		height: 60px;
+		align-self: flex-end;
+		order: 5;
+
+		&.show {
+			margin-top: 0em;
+
+			//box-shadow: 0px 4px 6px rgba(0,0,0,0.5);
+
+			&:after {
+				content: "\f106";
+				text-align: center;
+				width: 100%;
+				display: inline;
+				font-family: fontawesome;
+
+			}
+		}
 
 		&:after {
-			content: "\f106";
+			content: "\f107";
 			text-align: center;
 			width: 100%;
 			display: inline;
 			font-family: fontawesome;
 
 		}
-	}
-
-	&:after {
-		content: "\f107";
-		text-align: center;
-		width: 100%;
-		display: inline;
-		font-family: fontawesome;
 
 	}
-
 }
+
 
 
 .nav {
@@ -702,6 +751,7 @@ POSTS & CONTENT STYLES
 .home {
 	#content {
 		padding-top: 250px;
+		background-color: rgba(255,255,255,0.8);
 	}
 }
 
@@ -1407,7 +1457,7 @@ FOOTER STYLES
 	background-color: $primary;
 	color: $white;
 	height: 300px;
-	margin-top: 4em;
+	//margin-top: 4em;
 }
 
 	/*

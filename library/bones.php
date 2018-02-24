@@ -159,7 +159,7 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
 
-		
+
 
 	}
 }
@@ -219,6 +219,8 @@ function bones_theme_support() {
 	register_nav_menus(
 		array(
 			'main-nav' => __( 'The Main Menu', 'bonestheme' ),   // main nav in header
+			'main-nav-left' => __( 'The Left Menu', 'bonestheme' ),   // main nav in header
+			'main-nav-right' => __( 'The Right Menu', 'bonestheme' ),   // main nav in header
 			'footer-links' => __( 'Footer Links', 'bonestheme' ) // secondary nav in footer
 		)
 	);
