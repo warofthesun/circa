@@ -2271,7 +2271,8 @@ and more scalable.
   background-color: #2B4486;
   text-align: center;
   height: 110px;
-  width: 560px;
+  max-width: 560px;
+  width: 100%;
   border-bottom-right-radius: 35em 10em;
   border-bottom-left-radius: 35em 10em;
   padding-top: 1em; }
