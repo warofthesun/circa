@@ -22,6 +22,60 @@ anymore, so just be aware that if you drop
 them in here, they won't work.
 */
 
+.top-half {
+	height: 100vh;
+}
+
+#kite {
+	top: 410px;
+	left: 32%;
+}
+
+#balloon {
+	top: 140px;
+	left: 62%;
+}
+
+#bird-1 {
+	top: 100px;
+	left: 67%;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+#bird-2 {
+	top: 300px;
+	left: 40%;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+#bird-3 {
+	top: 650px;
+	left: 40%;
+}
+
+#flock-1 {
+	top: 70px;
+	left: 30%;
+}
+
+#flock-2 {
+	top: 210px;
+	left: 50%;
+}
+
+#header-graf {
+	padding-top: 50px;
+	height: 400px;
+}
+
 
 /*********************
 NAVIGATION STYLES
@@ -48,6 +102,34 @@ NAVIGATION STYLES
 	}
 }
 
+#menu-footer {
+	li {
+		a {
+			padding-bottom: 0;
+
+			&:hover {
+				color: $primary-light;
+			}
+		}
+	}
+	.sub-menu {
+		position: relative;
+		visibility: visible;
+		border: 0;
+		background: transparent;
+
+		li {
+			a {
+				padding: 0;
+				font-size: 0.9em;
+
+				&:hover {
+					color: $primary-light;
+				}
+			}
+		}
+	}
+}
 
 	/* .menu is clearfixed inside mixins.scss */
 	.menu {
@@ -103,7 +185,7 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
-
+	padding: 1.5em 1.5em 0;
 
 	/* at this larger size, we can start to align images */
 	.alignleft, img.alignleft {
@@ -124,6 +206,18 @@ POSTS & CONTENT STYLES
 	}
 
 } /* end .entry-content */
+
+.overview {
+	&-content {
+		div {
+			padding: 0 0em;
+		}
+	}
+}
+
+.intro-copy {
+	margin:2em;
+}
 
 /*********************
 FOOTER STYLES

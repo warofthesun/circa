@@ -209,10 +209,10 @@ HEADER STYLES
 	}
 
 	.top-half {
-		background-image: url('../images/background.jpg');
+		//background-image: url('../images/background.jpg');
 		background-repeat-x: repeat;
 		background-size: cover;
-		height: 100vh;
+		height: 90vh;
 
 		#inner-header {
 			background-image: none;
@@ -252,6 +252,7 @@ HEADER STYLES
 		div {
 			margin-bottom: 1em;
 			max-width: 500px;
+			padding: 0 5em;
 		}
 
 		h1 {
@@ -264,9 +265,7 @@ HEADER STYLES
 	}
 }
 
-#target-balloon {
-	display: inline-block;
-}
+
 
 #kite, #balloon, #bird-1, #bird-2, #bird-3, #flock-1, #flock-2 {
 	position: absolute;
@@ -275,22 +274,32 @@ HEADER STYLES
 
 #kite {
 	top: 410px;
-	left: 32%;
+	left: 12%;
 }
 
 #balloon {
 	top: 140px;
-	left: 62%;
+	left: 75%;
 }
 
 #bird-1 {
-	top: 100px;
-	left: 67%;
+	top: 70px;
+	left: 80%;
+
+	img {
+		width: 60%;
+		height: auto;
+	}
 }
 
 #bird-2 {
 	top: 300px;
 	left: 40%;
+
+	img {
+		width: 60%;
+		height: auto;
+	}
 }
 
 #bird-3 {
@@ -300,7 +309,7 @@ HEADER STYLES
 
 #flock-1 {
 	top: 70px;
-	left: 30%;
+	left: 0%;
 }
 
 #flock-2 {
@@ -310,7 +319,7 @@ HEADER STYLES
 
 #header-graf {
 	position: relative;
-	height: 400px;
+	height: 80vh;
 	padding-top: 50px;
 	align-items: flex-start;
 }
@@ -323,7 +332,6 @@ HEADER STYLES
 }
 
 .intro-copy {
-	margin:2em;
 	margin-bottom: 4em;
 }
 
@@ -655,6 +663,30 @@ and more scalable.
 	}
 }
 
+#menu-footer {
+	li {
+		a {
+			padding-bottom: 0;
+
+			}
+		}
+
+	.sub-menu {
+		border: 0;
+		background: transparent;
+
+		li {
+			a {
+				padding: 0;
+				font-size: 0.9em;
+
+				&:hover {
+					color: $primary-light;
+				}
+			}
+		}
+	}
+}
 
 
 .nav {
@@ -692,7 +724,7 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 			&:hover, &:focus {
-
+				border-bottom: 0;
 			}
 		}
 
@@ -707,6 +739,10 @@ and more scalable.
 		depend on the project. Here's some great info on it:
 		http://www.alistapart.com/articles/organizing-mobile/
 		*/
+
+
+
+
 		ul.sub-menu,
 		ul.children {
 
@@ -858,7 +894,7 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			padding: 1.5em 1.5em 0;
+			padding: 1.5em 0em 0;
 
 			p {
 				margin: 0 0 1.5em;
@@ -1456,7 +1492,7 @@ FOOTER STYLES
 	clear: both;
 	background-color: $primary;
 	color: $white;
-	height: 300px;
+	min-height: 300px;
 	//margin-top: 4em;
 }
 
