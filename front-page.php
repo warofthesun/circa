@@ -13,8 +13,8 @@ while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 	</div>
 	<div class="col-xs-0 col-sm-1 cf"></div>
 </div>
-<div class="overview row">
-	<div class="overview-content row">
+<div class="overview">
+	<div class="overview-content">
 		<div>
 			<h1>Overview</h1>
 			<?php the_field('overview'); ?>

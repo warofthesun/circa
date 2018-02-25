@@ -1924,14 +1924,17 @@ HEADER STYLES
       -ms-flex-align: center;
           align-items: center;
   margin-right: 0 !important;
-  margin-left: 0 !important; }
+  margin-left: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .overview-content {
   background-color: #242263;
-  width: 640px;
+  width: 100%;
   position: absolute;
-  padding: 2em;
-  border-radius: 320px / 120px;
+  padding: 1em;
+  border-radius: 100px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1940,21 +1943,20 @@ HEADER STYLES
           align-items: center;
   color: #fff;
   margin-right: 0 !important;
-  margin-left: 0 !important; }
-
-.overview-content h1 {
-  color: #fff; }
+  margin-left: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .overview-content div {
-  margin-bottom: 1em;
-  max-width: 500px;
-  padding: 0 5em; }
+  max-width: 500px; }
 
 .overview-content h1 {
   margin-top: 0;
   margin-bottom: .5em;
   text-transform: uppercase;
   font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
   font-size: 2em; }
 
 #kite, #balloon, #bird-1, #bird-2, #bird-3, #flock-1, #flock-2 {
@@ -1971,7 +1973,8 @@ HEADER STYLES
 
 #bird-1 {
   top: 70px;
-  left: 80%; }
+  left: 80%;
+  display: none; }
 
 #bird-1 img {
   width: 60%;
@@ -1995,7 +1998,8 @@ HEADER STYLES
 
 #flock-2 {
   top: 210px;
-  left: 50%; }
+  left: 50%;
+  display: none; }
 
 #header-graf {
   position: relative;
@@ -2003,7 +2007,8 @@ HEADER STYLES
   padding-top: 50px;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start; }
+          align-items: flex-start;
+  min-height: 650px; }
 
 .header-graf, .intro-copy {
   text-align: center;
@@ -2882,7 +2887,8 @@ them in here, they won't work.
     left: 62%; }
   #bird-1 {
     top: 100px;
-    left: 67%; }
+    left: 67%;
+    display: inline-block; }
   #bird-1 img {
     width: 100%;
     height: auto; }
@@ -2900,9 +2906,11 @@ them in here, they won't work.
     left: 30%; }
   #flock-2 {
     top: 210px;
-    left: 50%; }
+    left: 50%;
+    display: inline-block; }
   #header-graf {
     padding-top: 50px;
+    min-height: 400px;
     height: 400px; }
   /*********************
 NAVIGATION STYLES
@@ -2984,6 +2992,39 @@ POSTS & CONTENT STYLES
     padding: 0 0em; }
   .intro-copy {
     margin: 2em; }
+  .overview {
+    padding: 2em;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    text-align: center;
+    height: 140px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 0 !important;
+    margin-left: 0 !important; }
+  .overview-content {
+    background-color: #242263;
+    width: 640px;
+    position: absolute;
+    padding: 2em;
+    border-radius: 320px / 120px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+    margin-right: 0 !important;
+    margin-left: 0 !important; }
+  .overview-content div {
+    margin-bottom: 1em;
+    max-width: 520px; }
   /*********************
 FOOTER STYLES
 *********************/

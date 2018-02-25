@@ -232,27 +232,23 @@ HEADER STYLES
   align-items: center;
 	margin-right: 0 !important;
 	margin-left: 0 !important;
+	display: flex;
 
 	&-content {
 		background-color: $primary;
-		width: 640px;
+		width: 100%;
 		position: absolute;
-		padding: 2em;
-		border-radius: 320px / 120px;
+		padding: 1em;
+		border-radius: 100px;
 		justify-content: center;
 		align-items: center;
 		color: $white;
 		margin-right: 0 !important;
 		margin-left: 0 !important;
-
-		h1 {
-			color: $white;
-		}
+		display: flex;
 
 		div {
-			margin-bottom: 1em;
 			max-width: 500px;
-			padding: 0 5em;
 		}
 
 		h1 {
@@ -260,6 +256,7 @@ HEADER STYLES
 			margin-bottom: .5em;
 			text-transform: uppercase;
 			font-family: $display;
+			color: $white;
 			font-size: 2em;
 		}
 	}
@@ -285,6 +282,7 @@ HEADER STYLES
 #bird-1 {
 	top: 70px;
 	left: 80%;
+	display: none;
 
 	img {
 		width: 60%;
@@ -315,6 +313,7 @@ HEADER STYLES
 #flock-2 {
 	top: 210px;
 	left: 50%;
+	display: none;
 }
 
 #header-graf {
@@ -322,6 +321,7 @@ HEADER STYLES
 	height: 80vh;
 	padding-top: 50px;
 	align-items: flex-start;
+	min-height: 650px;
 }
 
 .header-graf, .intro-copy {

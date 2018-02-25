@@ -180,7 +180,8 @@ them in here, they won't work.
 
 #bird-1 {
   top: 100px;
-  left: 67%; }
+  left: 67%;
+  display: inline-block; }
 
 #bird-1 img {
   width: 100%;
@@ -204,10 +205,12 @@ them in here, they won't work.
 
 #flock-2 {
   top: 210px;
-  left: 50%; }
+  left: 50%;
+  display: inline-block; }
 
 #header-graf {
   padding-top: 50px;
+  min-height: 400px;
   height: 400px; }
 
 /*********************
@@ -309,6 +312,42 @@ POSTS & CONTENT STYLES
 
 .intro-copy {
   margin: 2em; }
+
+.overview {
+  padding: 2em;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  text-align: center;
+  height: 140px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
+
+.overview-content {
+  background-color: #242263;
+  width: 640px;
+  position: absolute;
+  padding: 2em;
+  border-radius: 320px / 120px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
+
+.overview-content div {
+  margin-bottom: 1em;
+  max-width: 520px; }
 
 /*********************
 FOOTER STYLES
