@@ -1902,10 +1902,9 @@ HEADER STYLES
   border-bottom: 0px; }
 
 .top-half {
-  background-image: url("../images/background.jpg");
   background-repeat-x: repeat;
   background-size: cover;
-  height: 100vh; }
+  height: 90vh; }
 
 .top-half #inner-header {
   background-image: none; }
@@ -1948,7 +1947,8 @@ HEADER STYLES
 
 .overview-content div {
   margin-bottom: 1em;
-  max-width: 500px; }
+  max-width: 500px;
+  padding: 0 5em; }
 
 .overview-content h1 {
   margin-top: 0;
@@ -1957,28 +1957,33 @@ HEADER STYLES
   font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 2em; }
 
-#target-balloon {
-  display: inline-block; }
-
 #kite, #balloon, #bird-1, #bird-2, #bird-3, #flock-1, #flock-2 {
   position: absolute;
   display: inline-block; }
 
 #kite {
   top: 410px;
-  left: 32%; }
+  left: 12%; }
 
 #balloon {
   top: 140px;
-  left: 62%; }
+  left: 75%; }
 
 #bird-1 {
-  top: 100px;
-  left: 67%; }
+  top: 70px;
+  left: 80%; }
+
+#bird-1 img {
+  width: 60%;
+  height: auto; }
 
 #bird-2 {
   top: 300px;
   left: 40%; }
+
+#bird-2 img {
+  width: 60%;
+  height: auto; }
 
 #bird-3 {
   top: 650px;
@@ -1986,7 +1991,7 @@ HEADER STYLES
 
 #flock-1 {
   top: 70px;
-  left: 30%; }
+  left: 0%; }
 
 #flock-2 {
   top: 210px;
@@ -1994,7 +1999,7 @@ HEADER STYLES
 
 #header-graf {
   position: relative;
-  height: 400px;
+  height: 80vh;
   padding-top: 50px;
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -2007,7 +2012,6 @@ HEADER STYLES
   line-height: 1.8em; }
 
 .intro-copy {
-  margin: 2em;
   margin-bottom: 4em; }
 
 .front-page .research-projects {
@@ -2320,6 +2324,20 @@ and more scalable.
   display: inline;
   font-family: fontawesome; }
 
+#menu-footer li a {
+  padding-bottom: 0; }
+
+#menu-footer .sub-menu {
+  border: 0;
+  background: transparent; }
+
+#menu-footer .sub-menu li a {
+  padding: 0;
+  font-size: 0.9em; }
+
+#menu-footer .sub-menu li a:hover {
+  color: #2B4486; }
+
 .nav {
   border-bottom: 0;
   margin: 0;
@@ -2370,6 +2388,9 @@ and more scalable.
 			the style.scss file where it's relevant. We want to
 			keep this file as small as possible!
 			*/ }
+
+.nav li a:hover, .nav li a:focus {
+  border-bottom: 0; }
 
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
@@ -2448,7 +2469,7 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
-  padding: 1.5em 1.5em 0;
+  padding: 1.5em 0em 0;
   /*
 			image alignment on a screen this size may be
 			a bit difficult. It's set to start aligning
@@ -2809,7 +2830,7 @@ FOOTER STYLES
   clear: both;
   background-color: #242263;
   color: #fff;
-  height: 300px; }
+  min-height: 300px; }
 
 /*
 	if you checked out the link above:
@@ -2850,6 +2871,38 @@ You can't use @extend within media queries
 anymore, so just be aware that if you drop
 them in here, they won't work.
 */
+  .top-half {
+    height: 100vh; }
+  #kite {
+    top: 410px;
+    left: 32%; }
+  #balloon {
+    top: 140px;
+    left: 62%; }
+  #bird-1 {
+    top: 100px;
+    left: 67%; }
+  #bird-1 img {
+    width: 100%;
+    height: auto; }
+  #bird-2 {
+    top: 300px;
+    left: 40%; }
+  #bird-2 img {
+    width: 100%;
+    height: auto; }
+  #bird-3 {
+    top: 650px;
+    left: 40%; }
+  #flock-1 {
+    top: 70px;
+    left: 30%; }
+  #flock-2 {
+    top: 210px;
+    left: 50%; }
+  #header-graf {
+    padding-top: 50px;
+    height: 400px; }
   /*********************
 NAVIGATION STYLES
 *********************/
@@ -2873,6 +2926,20 @@ NAVIGATION STYLES
     opacity: 1; }
   .nav li {
     border-bottom: 0; }
+  #menu-footer li a {
+    padding-bottom: 0; }
+  #menu-footer li a:hover {
+    color: #2B4486; }
+  #menu-footer .sub-menu {
+    position: relative;
+    visibility: visible;
+    border: 0;
+    background: transparent; }
+  #menu-footer .sub-menu li a {
+    padding: 0;
+    font-size: 0.9em; }
+  #menu-footer .sub-menu li a:hover {
+    color: #2B4486; }
   /* .menu is clearfixed inside mixins.scss */
   .menu {
     /* end .menu ul */ }
@@ -2896,6 +2963,7 @@ POSTS & CONTENT STYLES
 *********************/
   /* entry content */
   .entry-content {
+    padding: 1.5em 1.5em 0;
     /* at this larger size, we can start to align images */ }
   .entry-content .alignleft, .entry-content img.alignleft {
     margin-right: 1.5em;
@@ -2911,6 +2979,10 @@ POSTS & CONTENT STYLES
     display: block;
     clear: both; }
   /* end .entry-content */
+  .overview-content div {
+    padding: 0 0em; }
+  .intro-copy {
+    margin: 2em; }
   /*********************
 FOOTER STYLES
 *********************/

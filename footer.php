@@ -1,6 +1,16 @@
 			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
 				<div id="inner-footer" class="wrap cf row">
+					<?php $custom_query = new WP_Query('pagename=get-involved');
+					while($custom_query->have_posts()) : $custom_query->the_post();
+
+					if (get_field('footer_callout')): ?>
+					<H2 style="color:white;">Get Involved</H2>
+					<?php the_field('footer_callout'); ?>
+
+
+				<?php endif; endwhile; ?>
+				<?php wp_reset_postdata(); // reset the query ?>
 
 					<nav role="navigation">
 						<?php wp_nav_menu(array(
