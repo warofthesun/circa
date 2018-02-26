@@ -394,12 +394,13 @@ HEADER STYLES
 		.logo {
 			height: 125px;
 			flex-basis: 125px;
-			margin-right: 2em;
+			margin-right: 1em;
 			padding: 0;
 			display: flex;
 
 			img {
 				max-width: 125px;
+				width: 100%;
 				height: auto;
 				margin-bottom: 0;
 				align-self:center;

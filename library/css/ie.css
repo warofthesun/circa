@@ -213,6 +213,9 @@ them in here, they won't work.
   min-height: 400px;
   height: 400px; }
 
+.research_project .logo {
+  margin-right: 2em; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
