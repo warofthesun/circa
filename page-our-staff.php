@@ -19,7 +19,8 @@
 
 
 								<section class="entry-content cf" itemprop="articleBody">
-
+									<?php $custom_query = new WP_Query('pagename=staff-content');
+									while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 									<?php if( get_field('section_title')): ?>
 										<h2><?php the_field('section_title'); ?></h2>
 									<?php endif; ?>
@@ -27,8 +28,7 @@
 										<div class="intro-copy" style="text-align:<?php the_field('intro_copy_alignment'); ?>"><?php the_field('intro_copy'); ?></div>
 									<?php endif; ?>
 
-									<?php $custom_query = new WP_Query('pagename=staff-content');
-									while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+
 									<?php
 
 											// check if the flexible content field has rows of data

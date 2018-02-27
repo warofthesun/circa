@@ -44,7 +44,7 @@
 		<div class="header-nav col-xs-12">
 			<a href="/" rel="nofollow" class="logo col-xs-12 col-sm-4">
 				<div>
-					<img src="/wp-content/themes/circa-center-for-integrative-research/library/images/logo-white.png">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-white.png">
 				</div>
 			</a>
 			<div class="col-xs-12 col-sm-4 menu-left">
