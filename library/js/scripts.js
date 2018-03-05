@@ -119,15 +119,14 @@ jQuery(document).ready(function($) {
 
 			var kitepath = {
 				entry : {
-					curviness: 3.0,
+					curviness: 1.0,
 					autoRotate: false,
 					values: [
-							{x: 0,	y: 0},
-							{x: 200,	y: 50},
-							{x: 100,	y: -250},
+
+							{x: -700,	y: -650},
 						]
 				},
-
+				/*
 				exit : {
 					curviness: 3.0,
 					autoRotate: false,
@@ -135,19 +134,20 @@ jQuery(document).ready(function($) {
 							{x: -600,	y: -800}
 						]
 				},
+				*/
 			};
 
 			var balloonpath = {
 				entry : {
-					curviness: 3.0,
+					curviness: 1.0,
 					autoRotate: false,
 					values: [
-							{x: 30,	y: -200},
+							{x: -10,	y: 100},
 
 
 						]
 				},
-
+				/*
 				exit : {
 					curviness: 3.0,
 					autoRotate: false,
@@ -159,6 +159,7 @@ jQuery(document).ready(function($) {
 
 						]
 				},
+				*/
 			};
 
 			var bird1path = {
@@ -167,7 +168,7 @@ jQuery(document).ready(function($) {
 					autoRotate: false,
 					values: [
 
-						{x: 600,	y: -400}
+						{x: 600,	y: -500}
 
 
 						]
@@ -176,7 +177,7 @@ jQuery(document).ready(function($) {
 
 			var bird2path = {
 				entry : {
-					curviness: 3.0,
+					curviness: 1.0,
 					autoRotate: false,
 					values: [
 
@@ -267,37 +268,9 @@ jQuery(document).ready(function($) {
 					.addTo(controller);
 
 
-					// create flock1 tween
-					var tweenFlock1 = new TimelineMax()
-
-						.add(TweenMax.to($("#flock-1"), 1, {css:{bezier:flock1path.exit}, ease:Power1.easeInOut}))
-
-					//build Flock 1 Scene
-					var sceneFlock1 = new ScrollMagic.Scene({
-						duration: '30%',
-						offset: 0
-					})
-					.setPin("#trigger-flock-1", {pushFollowers: false})
-					.setTween(tweenFlock1)
-					.addTo(controller);
-
-
-					// create flock2 tween
-					var tweenFlock2 = new TimelineMax()
-						.add(TweenMax.to($("#flock-2"), 1, {css:{bezier:flock2path.entry}, ease:Power1.easeInOut}))
-
-					//build Flock 2 Scene
-					var sceneFlock2 = new ScrollMagic.Scene({
-						duration: '50%',
-						offset: 150
-					})
-					.setPin("#trigger-flock-2", {pushFollowers: false})
-					.setTween(tweenFlock2)
-					.addTo(controller);
-
 					// create bird1 tween
 					var tweenBird1 = new TimelineMax()
-						.add(TweenMax.to($("#bird-1"), 1, {css:{bezier:bird1path.entry}, ease:Power1.easeInOut}))
+						.add(TweenMax.to($("#bird-1"), 1, {css:{bezier:bird1path.entry}}))
 
 					//build Bird 1 Scene
 					var sceneBird1 = new ScrollMagic.Scene({
@@ -314,7 +287,7 @@ jQuery(document).ready(function($) {
 
 					// create bird2 tween
 					var tweenBird2 = new TimelineMax()
-						.add(TweenMax.to($("#bird-2"), 1, {css:{bezier:bird2path.entry}, ease:Power1.easeInOut}))
+						.add(TweenMax.to($("#bird-2"), 1, {css:{bezier:bird2path.entry}, /*ease:Power1.easeInOut*/}))
 
 					//build Bird 2 Scene
 					var sceneBird2 = new ScrollMagic.Scene({
@@ -332,14 +305,14 @@ jQuery(document).ready(function($) {
 
 					// create Balloon tween
 					var tweenBalloon = new TimelineMax()
-					.add(TweenMax.to($("#balloon"), 1, {css:{bezier:balloonpath.entry}, ease:Power1.easeInOut}))
-					.add(TweenMax.to($("#balloon"), 1, {css:{bezier:balloonpath.exit}, ease:Power1.easeInOut}))
+					.add(TweenMax.to($("#balloon"), 1, {css:{bezier:balloonpath.entry} /*, ease:Power1.easeInOut */}))
+					//.add(TweenMax.to($("#balloon"), 1, {css:{bezier:balloonpath.exit}, ease:Power1.easeInOut}))
 
 
 					//build balloon Scene
 					var sceneBalloon = new ScrollMagic.Scene({
 						duration: '35%',
-						offset: -10
+						offset: 0
 					})
 					.setPin("#trigger-balloon", {pushFollowers: false})
 					.setTween(tweenBalloon)
@@ -351,8 +324,8 @@ jQuery(document).ready(function($) {
 
 					// create kite tween
 					var tweenKite = new TimelineMax()
-						.add(TweenMax.to($("#kite"), 1, {css:{bezier:kitepath.entry}, ease:Power2.easeOutCirc}))
-						.add(TweenMax.to($("#kite"), 1, {css:{bezier:kitepath.exit}, ease:Power2.easeOutCirc}))
+						.add(TweenMax.to($("#kite"), 1, {css:{bezier:kitepath.entry}/*, ease:Power2.easeOutCirc */}))
+						//.add(TweenMax.to($("#kite"), 1, {css:{bezier:kitepath.exit}, ease:Power2.easeOutCirc}))
 
 
 					// build kite scene

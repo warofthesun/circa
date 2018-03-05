@@ -789,7 +789,31 @@ POSTS & CONTENT STYLES
 .home {
 	#content {
 		padding-top: 250px;
-		background-color: rgba(255,255,255,0.8);
+		background-color: rgba(255,255,255,1);
+	}
+}
+
+#popslide {
+	border-top-right-radius: 15px;
+	background-color: rgba(255,255,255,1) !important;
+	font-family: $display;
+	box-shadow: 0px 0px 10px rgba($primary, 0.4);
+
+	.popslide-close {
+		background-color: rgba($primary-light, 0.2);
+		border-top-right-radius: 15px;
+	}
+
+	input[type="submit"] {
+		border-radius: 5px;
+		padding: .5em 1em;
+		background-color: $primary;
+		text-transform: uppercase;
+		color: $white;
+	}
+
+	input[type="text"], input[type="email"] {
+		background-color: rgba(0,0,0,0.1);
 	}
 }
 

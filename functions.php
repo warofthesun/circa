@@ -318,17 +318,7 @@ function my_theme_register_required_plugins() {
 	 */
 	$plugins = array(
 
-		// All-in-One Migration
-		 array(
-		 	'name'     				=> 'All-in-One WP Migration', // The plugin name
-		 	'slug'     				=> 'advanced-custom-fields', // The plugin slug (typically the folder name)
-		 	'source'   				=> 'https://downloads.wordpress.org/plugin/all-in-one-wp-migration.zip', // The plugin source
-		 	'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-		 	'version' 				=> '6.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-		 	'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-		 	'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-		 	'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		 ),
+
 
 
 		// Require ACF Pro
@@ -343,17 +333,29 @@ function my_theme_register_required_plugins() {
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
 		),
 
-    // GitHub Updater
-		array(
-			'name'     				=> 'GitHub Updater', // The plugin name
-			'slug'     				=> 'github-updater-develop', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://github.com/afragen/github-updater/archive/develop.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		),
+    // MailChimp for WordPress
+    array(
+      'name'     				=> 'MailChimp for WordPress', // The plugin name
+      'slug'     				=> 'mailchimp-for-wp', // The plugin slug (typically the folder name)
+      'source'   				=> 'https://downloads.wordpress.org/plugin/mailchimp-for-wp.zip', // The plugin source
+      'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
+      'version' 				=> '4.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+      'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+      'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+      'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+    ),
+
+    // Popslide PRO
+    array(
+      'name'     				=> 'Popslide PRO', // The plugin name
+      'slug'     				=> 'popslide', // The plugin slug (typically the folder name)
+      'source'   				=> 'https://downloads.wordpress.org/plugin/popslide.zip', // The plugin source
+      'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
+      'version' 				=> '3.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+      'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+      'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+      'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+    ),
 
     // W3 Total Cache
 		array(
@@ -391,13 +393,13 @@ function my_theme_register_required_plugins() {
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
 		),
 
-    // Google Analytics
+    // Event Tickets
 		array(
-			'name'     				=> 'Google Analytics Dashboard for WP', // The plugin name
-			'slug'     				=> 'google-analytics-dashboard-for-wp', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.zip', // The plugin source
+			'name'     				=> 'Event Tickets', // The plugin name
+			'slug'     				=> 'event-tickets', // The plugin slug (typically the folder name)
+			'source'   				=> 'https://downloads.wordpress.org/plugin/event-tickets.zip', // The plugin source
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '5.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '4.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
