@@ -281,8 +281,32 @@ menu {
 ol,
 ul {
     padding: 0;
-    list-style-type: none;
+    list-style-type: disc;
 }
+
+.entry-content {
+
+    li {
+      margin: 0 0 2em 2em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+}
+
+.list-reset {
+  ul {
+    list-style-type: none;
+
+    li {
+      margin: 0;
+    }
+  }
+}
+
+
 
 /*
  * Corrects list images handled incorrectly in IE7.

@@ -236,7 +236,17 @@ menu {
 ol,
 ul {
   padding: 0;
+  list-style-type: disc; }
+
+.entry-content li {
+  margin: 0 0 2em 2em; }
+  .entry-content li:last-child {
+    margin-bottom: 0; }
+
+.list-reset ul {
   list-style-type: none; }
+  .list-reset ul li {
+    margin: 0; }
 
 /*
  * Corrects list images handled incorrectly in IE7.
@@ -2426,7 +2436,8 @@ POSTS & CONTENT STYLES
 			but it's up to you. Feel free to change it up.
 			*/ }
   .entry-content p {
-    margin: 0 0 1.5em; }
+    margin: 0 0 1.5em;
+    line-height: 1.7em; }
   .entry-content table {
     width: 100%;
     border: 1px solid #eaedf2;

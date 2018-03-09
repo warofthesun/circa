@@ -37,7 +37,7 @@
 										  // loop through the rows of data
 												while ( have_rows('staff') ) : the_row();
 												if( get_row_layout() == 'staff_group' ): ?>
-												<div class="col-xs-12 col-sm-11 staff-groups">
+												<div class="col-xs-12 col-sm-9 staff-groups list-reset">
 													<a name="<?php $page_link = sanitize_title_for_query( get_sub_field('group_name') ); echo esc_attr( $page_link ); ?>"></a>
 
 

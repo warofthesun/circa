@@ -466,7 +466,15 @@ probably best not to use it. I mean, were you going to anyway? */
   body#tinymce.wp-editor ol,
   body#tinymce.wp-editor ul {
     padding: 0;
+    list-style-type: disc; }
+  body#tinymce.wp-editor .entry-content li {
+    margin: 0 0 2em 2em; }
+    body#tinymce.wp-editor .entry-content li:last-child {
+      margin-bottom: 0; }
+  body#tinymce.wp-editor .list-reset ul {
     list-style-type: none; }
+    body#tinymce.wp-editor .list-reset ul li {
+      margin: 0; }
   body#tinymce.wp-editor nav ul,
   body#tinymce.wp-editor nav ol {
     list-style: none;
