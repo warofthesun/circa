@@ -88,6 +88,13 @@ you can add resource intensive styles.
 
 } // end of media query
 
+@media only screen and (max-width: 64em) {
+
+	// styles in 768up.scss
+	@import "breakpoints/max64em";
+
+} // end of media query
+
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and

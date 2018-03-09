@@ -1,0 +1,12 @@
+.menu-item-has-children {
+  font-weight: bold;
+
+  > a {
+    padding-bottom: 0 !important;
+  }
+
+  .sub-menu {
+    margin: 0;
+    font-weight: normal;
+  }
+}
