@@ -58,10 +58,14 @@
 																// width = $image[1];
 																// height = $image[2];
 															?>
+															<?php if( get_sub_field('staff_member_image')) {?>
 															<div class="col-xs-12 col-sm-2 logo">
 																<img src="<?php echo $image[0]; ?>">
 															</div>
 															<div class="col-xs-12 col-sm-10">
+															<?php } else { ?>
+															<div class="col-xs-12">
+															<?php } ?>
 																<h3 class="col-xs-12">
 																	<?php the_sub_field('name'); ?>
 																</h3>
