@@ -348,6 +348,13 @@ POSTS & CONTENT STYLES
 /*********************
 FOOTER STYLES
 *********************/
+#inner-footer .social {
+  text-align: right; }
+
+.copyright {
+  margin: 0em 0;
+  text-align: left; }
+
 /*
 check your menus here. do they look good?
 do they need tweaking?

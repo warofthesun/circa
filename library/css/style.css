@@ -1767,6 +1767,25 @@ img {
   #inner-footer .nav li {
     border-bottom: 0px; }
 
+#inner-footer .social {
+  text-align: center; }
+  #inner-footer .social a {
+    color: white;
+    font-size: 2em;
+    position: relative;
+    top: -.5em;
+    border-bottom: 0 !important;
+    opacity: 1;
+    -webkit-transition: .5s all;
+    transition: .5s all;
+    margin-left: .5em; }
+    #inner-footer .social a:first-child {
+      margin-left: 0; }
+    #inner-footer .social a:hover {
+      opacity: 0.5; }
+    #inner-footer .social a:active {
+      font-size: 1.98em; }
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -2767,6 +2786,10 @@ FOOTER STYLES
 	view.
 	*/
 /* end .footer-links */
+.copyright {
+  margin: 2em 0;
+  text-align: center; }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -2956,6 +2979,11 @@ POSTS & CONTENT STYLES
   /*********************
 FOOTER STYLES
 *********************/
+  #inner-footer .social {
+    text-align: right; }
+  .copyright {
+    margin: 0em 0;
+    text-align: left; }
   /*
 check your menus here. do they look good?
 do they need tweaking?

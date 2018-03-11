@@ -27,8 +27,22 @@
     					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 						)); ?>
 					</nav>
+					<div class="row">
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+						<div class="source-org copyright col-xs-12 col-sm-6">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</div>
+						<div class="col-xs-12 col-sm-6 social">
+							<?php $custom_query = new WP_Query('pagename=home-page-content');
+							while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+							<?php
+							//create a repeater loop
+							// check if the repeater field has rows of data
+							if( have_rows('socials') ): while ( have_rows('socials') ) : the_row(); ?>
+							<a href="<?php the_sub_field('social_link');?>"><i class="fab fa-<?php the_sub_field('social_platform') ?>"></i></a>
+							<?php endwhile; endif; endwhile;?>
+							<?php wp_reset_postdata(); // reset the query ?>
+						</div>
+					</div>
+
 
 				</div>
 

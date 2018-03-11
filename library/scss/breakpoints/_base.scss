@@ -45,6 +45,33 @@ img {
 			border-bottom: 0px;
 		}
 	}
+
+	.social {
+		text-align: center;
+
+		a {
+			color: white;
+			font-size: 2em;
+			position: relative;
+			top: -.5em;
+			border-bottom: 0 !important;
+			opacity: 1;
+			transition: .5s all;
+			margin-left: .5em;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:hover {
+				opacity: 0.5;
+			}
+
+			&:active {
+				font-size: 1.98em;
+			}
+		}
+	}
 }
 
 /********************
@@ -1543,4 +1570,7 @@ FOOTER STYLES
 	} /* end .footer-links */
 
 
-	.copyright {}
+	.copyright {
+		margin: 2em 0;
+		text-align: center;
+	}
