@@ -92,9 +92,7 @@
 						<div id=trigger-bird-3>
 							<div id="bird-3"><img src="<?php echo get_template_directory_uri(); ?>/library/images/bird-3.png" /></div>
 						</div>
-
 					</div>
-
 				</header>
-
 			</div>
+<div class="fog-background"></div>

@@ -221,13 +221,12 @@ HEADER STYLES
 	}
 
 .overview {
-	background-color: $primary;
-	padding: 2em;
+	// background-color: $primary;
+	padding: 0em;
   width: 100%;
   position: absolute;
   z-index: 99;
   text-align: center;
-  height: 140px;
   justify-content: center;
   align-items: center;
 	margin-right: 0 !important;

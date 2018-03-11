@@ -304,12 +304,10 @@ POSTS & CONTENT STYLES
   margin: 2em; }
 
 .overview {
-  padding: 2em;
   width: 100%;
   position: absolute;
   z-index: 99;
   text-align: center;
-  height: 140px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -323,7 +321,7 @@ POSTS & CONTENT STYLES
     width: 640px;
     position: absolute;
     padding: 2em;
-    border-radius: 320px / 120px;
+    border-radius: 320px / 130px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -336,6 +334,16 @@ POSTS & CONTENT STYLES
     .overview-content div {
       margin-bottom: 1em;
       max-width: 520px; }
+
+.fog-background {
+  height: 700px;
+  position: absolute;
+  width: 100%;
+  background-image: url(../images/fog.png);
+  background-size: contain;
+  background-repeat-x: repeat;
+  background-repeat-y: no-repeat;
+  bottom: -480px; }
 
 /*********************
 FOOTER STYLES
