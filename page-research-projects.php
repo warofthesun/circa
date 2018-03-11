@@ -28,7 +28,7 @@
 									<?php endif; ?>
 
 
-												<div class="col-xs-12 col-sm-11 staff-groups">
+												<div class="col-xs-12 col-sm-11 staff-groups list-reset">
 
 
 													<ul class="row cf research-projects">
