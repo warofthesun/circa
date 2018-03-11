@@ -1695,6 +1695,9 @@ textarea,
     .field.is-disabled:active {
       background-color: #d5edf8; }
 
+input[type="text"] {
+  border: 1px solid #2B4486; }
+
 input[type="password"] {
   letter-spacing: 0.3em; }
 
