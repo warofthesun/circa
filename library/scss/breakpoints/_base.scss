@@ -669,7 +669,7 @@ and more scalable.
 	li {
 		a {
 			padding-bottom: 0;
-
+			border-bottom: 0 !important;
 			}
 		}
 
@@ -679,8 +679,9 @@ and more scalable.
 
 		li {
 			a {
-				padding: 0;
+				padding: .5em 0;
 				font-size: 0.9em;
+				border-bottom: 0 !important;
 
 				&:hover {
 					color: $primary-light;
