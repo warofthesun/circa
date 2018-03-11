@@ -29,7 +29,13 @@
 									<?php if( get_field('intro_copy') ): ?>
 										<div class="intro-copy" style="text-align:<?php the_field('intro_copy_alignment'); ?>"><?php the_field('intro_copy'); ?></div>
 									<?php endif; ?>
-									<div style="background-color:rgba(255,255,255,0.8); padding:1em 0;">
+									<div
+									<?php if( get_field('content_background') ): ?>
+
+											style="background-color:rgba(255,255,255,0.8); padding:1em 0;"
+
+										<?php endif; ?>
+									>
 
 									<div class=" col-xs-11 col-sm-9" style="margin:0 auto;">
 

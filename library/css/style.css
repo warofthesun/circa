@@ -1695,7 +1695,7 @@ textarea,
     .field.is-disabled:active {
       background-color: #d5edf8; }
 
-input[type="text"] {
+input[type="text"], input[type="email"], textarea {
   border: 1px solid #2B4486; }
 
 input[type="password"] {
