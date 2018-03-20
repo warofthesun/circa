@@ -261,7 +261,7 @@ jQuery(document).ready(function($) {
 					var pinIntroScene = new ScrollMagic.Scene({
 						triggerHook: 0.2,
 						duration: '1',
-						offset: 1
+						offset: 0
 					})
 					.setPin('#logo', {pushFollowers: false})
 					.setTween(logoTween)
