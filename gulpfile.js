@@ -1,10 +1,17 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var browserSync = require('browser-sync').create();
 
 gulp.task('watch', function(){
   gulp.watch('library/scss/**/*.scss', ['sass']);
   // Other watchers
+  browserSync.init({
+        port: 8200,
+        proxy: "http://localhost:8200"
+    });
+    gulp.watch("./*.php").on("change", browserSync.reload);
+    gulp.watch("./library/scss/**/*.scss").on("change", browserSync.reload);
 })
 
 gulp.task('sass', function(){
