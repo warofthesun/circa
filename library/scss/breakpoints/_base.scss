@@ -31,15 +31,14 @@ img {
 }
 
 #inner-header, #inner-footer {
-	flex-direction: column;
+
 }
 
 #inner-footer {
 	.nav {
 		opacity: 1;
-		flex-direction: row;
+
 		height: auto;
-		flex-wrap: wrap;
 
 		li {
 			border-bottom: 0px;
@@ -254,24 +253,17 @@ HEADER STYLES
   position: absolute;
   z-index: 99;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-	margin-right: 0 !important;
-	margin-left: 0 !important;
-	display: flex;
+
 
 	&-content {
 		background-color: $primary;
 		width: 100%;
-		position: absolute;
+		position: relative;
 		padding: 1em;
 		border-radius: 100px;
-		justify-content: center;
-		align-items: center;
 		color: $white;
-		margin-right: 0 !important;
-		margin-left: 0 !important;
-		display: flex;
+		margin: 0 auto;
+
 
 		div {
 			max-width: 500px;
@@ -346,7 +338,6 @@ HEADER STYLES
 	position: relative;
 	height: 80vh;
 	padding-top: 50px;
-	align-items: flex-start;
 	min-height: 650px;
 }
 
@@ -364,6 +355,13 @@ HEADER STYLES
 .front-page {
 	.research-projects {
 		background-color: transparent;
+
+		ul {
+			li {
+				list-style-type: none;
+				margin: 0;
+			}
+		}
 		.project {
 			border-bottom: 0px;
 		}
@@ -407,22 +405,19 @@ HEADER STYLES
 
 		.project-staff {
 			height: 125px;
-			display:flex;
-			align-items:flex-start;
 			justify-content: center;
 			margin: 0;
 			text-transform: uppercase;
 			font-size: 1em;
 			font-family: $display;
-			flex-direction: column;
+
 		}
 
 		.logo {
 			height: 125px;
-			flex-basis: 125px;
 			margin-right: 1em;
 			padding: 0;
-			display: flex;
+
 
 			img {
 				max-width: 125px;
@@ -450,10 +445,9 @@ STAFF LANDING PAGE STYLES
 .staff-blocks, .staff-groups {
   margin:0 auto !important;
   padding:0;
-  justify-content:space-between;
 
   .block-column {
-    height: 450px;
+    height: 550px;
     margin-bottom: 1rem;
   }
 
@@ -468,7 +462,7 @@ STAFF LANDING PAGE STYLES
 		background-repeat: no-repeat;
 
     &.size-1 {
-      height:38%;
+      height:39%;
     }
 
     &.size-2 {
@@ -498,7 +492,7 @@ STAFF LANDING PAGE STYLES
     	width: 100%;
     	height: 100%;
       left: -100%;
-      display: flex;
+
       justify-content: center;
       align-items: center;
 
@@ -512,6 +506,11 @@ STAFF LANDING PAGE STYLES
         text-align: center;
         font-family: $display;
 				text-shadow: 1px 1px 1px $primary;
+			  height: 20%;
+			  overflow: auto;
+			  margin: auto;
+			  position: absolute;
+			  top: 0; left: 0; bottom: 0; right: 0;
         }
       }
     }
@@ -602,7 +601,7 @@ and more scalable.
   margin: 0 auto;
   background-color: $primary-light;
   border-radius: 360px /100px;
-  display: flex;
+
   justify-content: center;
   align-items: center;
   top: -180%;
@@ -616,12 +615,12 @@ and more scalable.
 	width: 100%;
 	background-color: $primary-light;
 	z-index: 50;
-	display: flex;
-	flex-direction: column;
+
+
 
 	.logo {
 		order: 4;
-		display: flex;
+
 		justify-content: center;
 
 		div {
@@ -646,7 +645,7 @@ and more scalable.
 	}
 
 	.menu-right {
-		order: 3;
+		float: right;
 	}
 
 
@@ -661,7 +660,6 @@ and more scalable.
 		color: $white;
 		font-family: $display;
 		height: 60px;
-		align-self: flex-end;
 		order: 5;
 
 		&.show {
@@ -721,13 +719,11 @@ and more scalable.
 .nav {
 	border-bottom: 0;
 	margin: 0;
-	display: flex;
-	flex-direction: column;
+	text-align: center;
 	opacity: 0;
 	height: 0;
 	transition: all .5s;
 	width: 100%;
-	justify-content: space-evenly;
 
 	&.show {
 		opacity: 1;
@@ -880,7 +876,7 @@ POSTS & CONTENT STYLES
 
 	#inner-content {
 		&.row {
-			flex-direction: column;
+
 		}
 	}
 }

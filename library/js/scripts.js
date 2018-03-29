@@ -234,7 +234,7 @@ jQuery(document).ready(function($) {
 						duration: '30%',
 						offset: 1
 					})
-					.setPin('.header-nav-front', {pushFollowers: false})
+				  .setPin('.header-nav-front', {pushFollowers: false})
 
 					.addTo(controller);
 

@@ -4,12 +4,12 @@
 while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 <div class="row wrap" id="header-graf">
 	<div class="col-xs-0 col-sm-1 cf"></div>
-	<div class="col-xs-12  col-sm-10 cf">
-		<div class="row">
+	<div class="col-xs-12  col-sm-10 cf" style="margin:0 auto;">
+
 			<div class="col-xs-12 cf header-graf">
 				<?php the_field('intro'); ?>
 			</div>
-		</div>
+
 	</div>
 	<div class="col-xs-0 col-sm-1 cf"></div>
 </div>
@@ -50,6 +50,7 @@ while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 							<img src="<?php echo $image[0]; ?>">
 						</a>
 					<?php endif; ?>
+					
 					<div class="col-xs-7 project-staff">
 
 							<a href="<?php echo home_url(); ?>/research-projects#<?php $page_link = sanitize_title_for_query( get_sub_field('project_name') ); echo esc_attr( $page_link ); ?>" class="h2"><?php the_sub_field('project_name'); ?></a>

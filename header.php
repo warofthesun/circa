@@ -42,11 +42,7 @@
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage" id="inner-header">
 		<div class="header-nav col-xs-12">
-			<a href="/" rel="nofollow" class="logo col-xs-12 col-sm-4">
-				<div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-white.png">
-				</div>
-			</a>
+
 			<div class="col-xs-12 col-sm-4 menu-left">
 				<nav role="navigation" class="row" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<?php
@@ -68,6 +64,11 @@
 						?>
 				</nav>
 			</div>
+			<a href="/" rel="nofollow" class="logo col-xs-12 col-sm-4">
+				<div>
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-white.png">
+				</div>
+			</a>
 			<div class="col-xs-12 col-sm-4 menu-right">
 					<nav role="navigation" class="row" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<?php
