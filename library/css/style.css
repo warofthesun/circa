@@ -2024,7 +2024,8 @@ HEADER STYLES
   margin-bottom: 4em; }
 
 .front-page .research-projects {
-  background-color: transparent; }
+  background-color: transparent;
+  width: 100%; }
   .front-page .research-projects .project {
     border-bottom: 0px; }
 
@@ -2047,7 +2048,8 @@ HEADER STYLES
     font-family: "adamcg_proregular", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .research-projects h2, .research-projects .h2 {
     display: block;
-    margin: 0; }
+    margin: 0;
+    max-width: 100%; }
   .research-projects h3 {
     margin: 0;
     font-size: .9em;
@@ -2327,9 +2329,9 @@ and more scalable.
   -webkit-transition: all .5s;
   transition: all .5s;
   width: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */ }
@@ -2952,7 +2954,7 @@ POSTS & CONTENT STYLES
     .overview-content {
       background-color: #242263;
       width: 640px;
-      position: absolute;
+      position: relative;
       padding: 2em;
       border-radius: 320px / 130px;
       -webkit-box-pack: center;
