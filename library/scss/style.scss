@@ -108,6 +108,19 @@ you can add resource intensive styles.
 
 } // end of media query
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+ {
+	 .header-nav {
+		flex-direction: row;
+
+		.logo {
+			order: 2;
+			justify-content: flex-start;
+			margin-left: -30px;
+		}
+	 }
+ }
+
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.

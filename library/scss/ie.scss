@@ -41,6 +41,16 @@ on using Modernizr classes, check out this link:
 http://www.modernizr.com/docs/
 ******************************************************************/
 
+.header-nav {
+	flex-direction: row;
+
+	.logo {
+		order: 2;
+		justify-content: flex-start;
+		margin-left: -30px;
+	}
+}
+
 /*
 For example, you can use something like:
 

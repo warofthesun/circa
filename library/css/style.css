@@ -2871,11 +2871,7 @@ NAVIGATION STYLES
     .header-nav .logo {
       -webkit-box-ordinal-group: 3;
           -ms-flex-order: 2;
-              order: 2;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
-      margin-left: -30px; }
+              order: 2; }
   .nav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -3175,6 +3171,21 @@ be seen on the Desktop.
 ******************************************************************/
   .wrap {
     width: 75em; } }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .header-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .header-nav .logo {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      margin-left: -30px; } }
 
 /*********************
 LARGE VIEWING SIZE
