@@ -343,7 +343,7 @@ POSTS & CONTENT STYLES
   background-size: contain;
   background-repeat-x: repeat;
   background-repeat-y: no-repeat;
-  bottom: -400px; }
+  bottom: -70%; }
 
 /*********************
 FOOTER STYLES
@@ -527,6 +527,9 @@ be seen on the Desktop.
 ******************************************************************/
 .wrap {
   width: 75em; }
+
+.fog-background {
+  bottom: -50%; }
 
 /*
 you can call the larger styles if you want, but there's really no need

@@ -2097,6 +2097,11 @@ HEADER STYLES
 /**************
 STAFF LANDING PAGE STYLES
 ***************/
+.staff-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .staff-blocks, .staff-groups {
   margin: 0 auto !important;
   padding: 0;
@@ -2977,7 +2982,7 @@ POSTS & CONTENT STYLES
     background-size: contain;
     background-repeat-x: repeat;
     background-repeat-y: no-repeat;
-    bottom: -400px; }
+    bottom: -70%; }
   /*********************
 FOOTER STYLES
 *********************/
@@ -3170,7 +3175,9 @@ be seen on the Desktop.
 
 ******************************************************************/
   .wrap {
-    width: 75em; } }
+    width: 75em; }
+  .fog-background {
+    bottom: -50%; } }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .header-nav {

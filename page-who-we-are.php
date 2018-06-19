@@ -28,7 +28,7 @@
 									<?php endif; ?>
 									<?php $custom_query = new WP_Query('pagename=staff-content');
 									while($custom_query->have_posts()) : $custom_query->the_post(); ?>
-											<div class="col-xs-12 col-sm-11 col-md-10 row cf staff-blocks" id="staff-blocks">
+											<div class="col-xs-12 col-sm-11 col-md-10 cf staff-blocks" id="staff-blocks">
 												<div class="col-xs-12 col-sm-4 block-column">
 													<?php
 														$attachment_id = get_field('group_one_image');

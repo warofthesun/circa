@@ -68,5 +68,4 @@ while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 		</div>
 	</div>
 </div>
-
 <?php get_footer(); ?>
