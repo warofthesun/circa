@@ -110,6 +110,23 @@ input[type="password"] {
   letter-spacing: 0.3em;
 }
 
+input[type="submit"] {
+  background-color: $primary;
+  border:0;
+  color: $white;
+  font-family: $display;
+  text-transform: uppercase;
+  padding: .5em 1em;
+  border-radius: 4px;
+  min-width: 200px;
+}
+
+label {
+  color:$primary;
+  text-transform: uppercase;
+  font-family: $display;
+}
+
 // textareas
 textarea {
   max-width: 100%;

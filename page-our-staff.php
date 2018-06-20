@@ -49,7 +49,7 @@
 														//create a repeater loop
 													 	// check if the repeater field has rows of data
 														if( have_rows('staff_member') ): while ( have_rows('staff_member') ) : the_row(); ?>
-														<li class="col-xs-12 cf row staff-member">
+														<li class="col-xs-12 cf staff-member">
 															<?php
 																$attachment_id = get_sub_field('staff_member_image');
 																$size = "square"; // (thumbnail, medium, large, full or custom size)

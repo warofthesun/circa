@@ -39,7 +39,11 @@
 														// height = $image[2];
 													?>
 													<div class="col-xs-12 block size-2" style="background-image:url('<?php echo $image[0]; ?>');">
+														<?php if( get_field('group_one_alternate_link') ) : ?>
+															<a href="<?php the_field('group_one_alternate_link'); ?>">
+															<?php else: ?>
 														<a href="<?php echo home_url(); ?>/our-staff#<?php $page_link = sanitize_title_for_query( get_field('group_one_name') ); echo esc_attr( $page_link ); ?>">
+														<?php endif; ?>
 															<div><span><?php the_field('group_one_name'); ?></span></div>
 														</a>
 													</div>
@@ -52,7 +56,11 @@
 														// height = $image[2];
 													?>
 													<div class="col-xs-12 block size-1" style="background-image:url('<?php echo $image[0]; ?>');">
+														<?php if( get_field('group_two_alternate_link') ) : ?>
+															<a href="<?php the_field('group_two_alternate_link'); ?>">
+															<?php else: ?>
 														<a href="<?php echo home_url(); ?>/our-staff#<?php $page_link = sanitize_title_for_query( get_field('group_two_name') ); echo esc_attr( $page_link ); ?>">
+														<?php endif; ?>
 															<div><span><?php the_field('group_two_name'); ?></span></div>
 														</a>
 													</div>
@@ -67,7 +75,11 @@
 												?>
 												<div class="col-xs-12 col-sm-4 block-column">
 													<div class="col-xs-12 block size-3" style="background-image:url('<?php echo $image[0]; ?>');">
+														<?php if( get_field('group_three_alternate_link') ) : ?>
+															<a href="<?php the_field('group_three_alternate_link'); ?>">
+															<?php else: ?>
 														<a href="<?php echo home_url(); ?>/our-staff#<?php $page_link = sanitize_title_for_query( get_field('group_three_name') ); echo esc_attr( $page_link ); ?>">
+														<?php endif; ?>
 															<div><span><?php the_field('group_three_name'); ?></span></div>
 														</a>
 													</div>
@@ -82,7 +94,11 @@
 												?>
 												<div class="col-xs-12 col-sm-4 block-column">
 													<div class="col-xs-12 block size-1" style="background-image:url('<?php echo $image[0]; ?>');">
+														<?php if( get_field('group_four_alternate_link') ) : ?>
+															<a href="<?php the_field('group_four_alternate_link'); ?>">
+															<?php else: ?>
 														<a href="<?php echo home_url(); ?>/our-staff#<?php $page_link = sanitize_title_for_query( get_field('group_four_name') ); echo esc_attr( $page_link ); ?>">
+														<?php endif; ?>
 															<div><span><?php the_field('group_four_name'); ?></span></div>
 														</a>
 													</div>
@@ -95,7 +111,11 @@
 														// height = $image[2];
 													?>
 													<div class="col-xs-12 block size-2" style="background-image:url('<?php echo $image[0]; ?>');">
+														<?php if( get_field('group_five_alternate_link') ) : ?>
+															<a href="<?php the_field('group_five_alternate_link'); ?>">
+															<?php else: ?>
 														<a href="<?php echo home_url(); ?>/our-staff#<?php $page_link = sanitize_title_for_query( get_field('group_five_name') ); echo esc_attr( $page_link ); ?>">
+														<?php endif; ?>
 															<div><span><?php the_field('group_five_name'); ?></span></div>
 														</a>
 													</div>
