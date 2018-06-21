@@ -1990,7 +1990,8 @@ HEADER STYLES
 
 #balloon {
   top: 140px;
-  left: 75%; }
+  left: 75%;
+  z-index: 1; }
 
 #bird-1 {
   top: 70px;

@@ -13,6 +13,7 @@ while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 	</div>
 	<div class="col-xs-0 col-sm-1 cf"></div>
 </div>
+<?php if( get_field('overview') ): ?>
 <div class="overview">
 	<div class="overview-content">
 		<div>
@@ -21,6 +22,7 @@ while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 		</div>
 	</div>
 </div>
+<?php endif; ?>
 <?php endwhile; ?>
 <div id="content" class="front-page">
 	<div id="inner-content" class="wrap cf row">
