@@ -1991,7 +1991,7 @@ HEADER STYLES
 #balloon {
   top: 140px;
   left: 75%;
-  z-index: 1; }
+  z-index: 60; }
 
 #bird-1 {
   top: 70px;
@@ -2388,8 +2388,9 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 .home #content {
-  padding-top: 250px;
-  background-color: white; }
+  background-color: white;
+  position: relative;
+  z-index: 55; }
 
 #popslide {
   border-top-right-radius: 15px;
@@ -3196,7 +3197,7 @@ be seen on the Desktop.
   .wrap {
     width: 75em; }
   .fog-background {
-    bottom: -50%; } }
+    bottom: -45%; } }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .header-nav {

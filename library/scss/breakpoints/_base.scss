@@ -303,7 +303,7 @@ HEADER STYLES
 #balloon {
 	top: 140px;
 	left: 75%;
-	z-index: 1;
+	z-index: 60;
 }
 
 #bird-1 {
@@ -819,8 +819,10 @@ POSTS & CONTENT STYLES
 
 .home {
 	#content {
-		padding-top: 250px;
+		//padding-top: 250px;
 		background-color: rgba(255,255,255,1);
+		position: relative;
+		z-index: 55;
 	}
 }
 
