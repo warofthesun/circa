@@ -3,15 +3,15 @@
 <?php $custom_query = new WP_Query('pagename=home-page-content');
 while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 <div class="row wrap" id="header-graf">
-	<div class="col-xs-0 col-sm-1 cf"></div>
-	<div class="col-xs-12  col-sm-10 cf">
+	<div class="col-xs-0 col-sm-1"></div>
+	<div class="col-xs-12  col-sm-10">
 		<div class="row">
-			<div class="col-xs-12 cf header-graf">
+			<div class="col-xs-12 header-graf">
 				<?php the_field('intro'); ?>
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-0 col-sm-1 cf"></div>
+	<div class="col-xs-0 col-sm-1"></div>
 </div>
 <?php if( get_field('overview') ): ?>
 <div class="overview">
@@ -25,20 +25,20 @@ while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 <?php endif; ?>
 <?php endwhile; ?>
 <div id="content" class="front-page">
-	<div id="inner-content" class="wrap cf row">
+	<div id="inner-content" class="wrap row">
 		<div class="row">
 			<?php $custom_query = new WP_Query('pagename=research-projects');
 			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			<article class="row research-projects">
-				<h1 class="col-xs-12 cf">
+				<h1 class="col-xs-12">
 					<a href="<?php echo home_url(); ?>/research-projects">Active research projects</a>
 				</h1>
-				<ul class="col-xs-12 cf row">
+				<ul class="col-xs-12 row">
 					<?php
 					//create a repeater loop
 					// check if the repeater field has rows of data
 					if( have_rows('research_project') ): while ( have_rows('research_project') ) : the_row(); ?>
-					<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cf row project">
+					<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 row project">
 						<?php
 							$attachment_id = get_sub_field('project_logo');
 							$size = "square-nocrop"; // (thumbnail, medium, large, full or custom size)

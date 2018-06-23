@@ -2113,11 +2113,6 @@ HEADER STYLES
 /**************
 STAFF LANDING PAGE STYLES
 ***************/
-.staff-blocks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
 .staff-blocks, .staff-groups {
   margin: 0 auto !important;
   padding: 0;

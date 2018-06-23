@@ -16,15 +16,15 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="wrap ">
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="m-all t-2of3 d-5of7 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<h1 class="archive-title h2"><span><?php _e( 'Posts Categorized:', 'bonestheme' ); ?></span> <?php single_cat_title(); ?></h1>
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> role="article">
 
 								<header class="article-header">
 
@@ -52,7 +52,7 @@
 
 							<?php else : ?>
 
-									<article id="post-not-found" class="hentry cf">
+									<article id="post-not-found" class="hentry ">
 										<header class="article-header">
 											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 										</header>

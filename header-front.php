@@ -45,9 +45,9 @@
 			<nav role="navigation" class="wrap row" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<?php wp_nav_menu(array(
 										 'container' => false,                           // remove nav container
-										 'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+										 'container_class' => 'menu ',                 // class of container (should you choose to use it)
 										 'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-										 'menu_class' => 'nav top-nav cf',               // adding custom nav class
+										 'menu_class' => 'nav top-nav ',               // adding custom nav class
 										 'theme_location' => 'main-nav',                 // where it's located in the theme
 										 'before' => '',                                 // before the menu
 													 'after' => '',                                  // after the menu
@@ -64,7 +64,7 @@
 		<div id="container">
 			<div class="top-half">
 				<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-					<div id="inner-header" class="wrap cf row">
+					<div id="inner-header" class="wrap  row">
 						<div id=trigger-flock-1>
 							<div id="flock-1"><img src="<?php echo get_template_directory_uri(); ?>/library/images/flock-1.png" /></div>
 						</div>

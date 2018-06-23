@@ -3,9 +3,9 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf row">
+				<div id="inner-content" class="wrap  row">
 
-					<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" class="col-xs-12 col-sm-8 col-lg-9 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -30,7 +30,7 @@
 
 						<?php else : ?>
 
-							<article id="post-not-found" class="hentry cf">
+							<article id="post-not-found" class="hentry ">
 									<header class="article-header">
 										<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 									</header>

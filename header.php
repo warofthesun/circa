@@ -53,9 +53,9 @@
 						wp_nav_menu(
 							array(
 								'container' => false,                           // remove nav container
-								'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+								'container_class' => 'menu ',                 // class of container (should you choose to use it)
 								'menu' => __( 'The Left Menu', 'bonestheme' ),  // nav name
-								'menu_class' => 'nav top-nav cf',               // adding custom nav class
+								'menu_class' => 'nav top-nav ',               // adding custom nav class
 								'theme_location' => 'main-nav-left',                 // where it's located in the theme
 								'before' => '',                                 // before the menu
 											'after' => '',                                  // after the menu
@@ -74,9 +74,9 @@
 						wp_nav_menu(
 							array(
 								'container' => false,                           // remove nav container
-								'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+								'container_class' => 'menu ',                 // class of container (should you choose to use it)
 								'menu' => __( 'The Right Menu', 'bonestheme' ),  // nav name
-								'menu_class' => 'nav top-nav cf',               // adding custom nav class
+								'menu_class' => 'nav top-nav ',               // adding custom nav class
 								'theme_location' => 'main-nav-right',                 // where it's located in the theme
 								'before' => '',                                 // before the menu
 											'after' => '',                                  // after the menu
