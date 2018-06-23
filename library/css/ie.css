@@ -411,6 +411,15 @@ NAVIGATION STYLES
 .nav.top-nav ul.children {
   margin-left: -2.5em; }
 
+.menu-left, .menu-right {
+  max-width: 400px; }
+
+.menu-left {
+  margin-left: auto; }
+
+.menu-right {
+  margin-right: auto; }
+
 .nav {
   border: 0;
   /* end .menu ul li */

@@ -73,6 +73,17 @@ NAVIGATION STYLES
 	}
 }
 
+.menu-left, .menu-right {
+	max-width: 400px;
+}
+
+.menu-left {
+	margin-left: auto;
+}
+
+.menu-right {
+	margin-right: auto;
+}
 
 .nav {
 	border: 0;
