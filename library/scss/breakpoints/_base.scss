@@ -345,10 +345,23 @@ HEADER STYLES
 
 #header-graf {
 	position: relative;
-	height: 80vh;
+	//height: 80vh;
 	padding-top: 50px;
 	align-items: flex-start;
-	min-height: 650px;
+	//min-height: 650px;
+
+	&:after {
+		content: "";
+		height: 700px;
+		position: absolute;
+		width: 100%;
+		background-image: url(../images/fog.png);
+		background-size: contain;
+		background-repeat: repeat-x;
+		z-index: 1;
+		bottom: 0px;
+		background-position: bottom;
+	}
 }
 
 .header-graf, .intro-copy {
@@ -823,8 +836,14 @@ POSTS & CONTENT STYLES
 		background-color: rgba(255,255,255,1);
 		position: relative;
 		z-index: 55;
+
+		&:before {
+			content: "";
+		}
 	}
 }
+
+
 
 #popslide {
 	border-top-right-radius: 15px;

@@ -335,16 +335,6 @@ POSTS & CONTENT STYLES
       margin-bottom: 1em;
       max-width: 520px; }
 
-.fog-background {
-  height: 700px;
-  position: absolute;
-  width: 100%;
-  background-image: url(../images/fog.png);
-  background-size: contain;
-  background-repeat-x: repeat;
-  background-repeat-y: no-repeat;
-  bottom: -70%; }
-
 /*********************
 FOOTER STYLES
 *********************/
@@ -536,9 +526,6 @@ be seen on the Desktop.
 ******************************************************************/
 .wrap {
   width: 75em; }
-
-.fog-background {
-  bottom: -45%; }
 
 /*
 you can call the larger styles if you want, but there's really no need

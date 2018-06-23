@@ -2023,12 +2023,21 @@ HEADER STYLES
 
 #header-graf {
   position: relative;
-  height: 80vh;
   padding-top: 50px;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start;
-  min-height: 650px; }
+          align-items: flex-start; }
+  #header-graf:after {
+    content: "";
+    height: 700px;
+    position: absolute;
+    width: 100%;
+    background-image: url(../images/fog.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    z-index: 1;
+    bottom: 0px;
+    background-position: bottom; }
 
 .header-graf, .intro-copy {
   text-align: center;
@@ -2391,6 +2400,8 @@ POSTS & CONTENT STYLES
   background-color: white;
   position: relative;
   z-index: 55; }
+  .home #content:before {
+    content: ""; }
 
 #popslide {
   border-top-right-radius: 15px;
@@ -2988,15 +2999,6 @@ POSTS & CONTENT STYLES
       .overview-content div {
         margin-bottom: 1em;
         max-width: 520px; }
-  .fog-background {
-    height: 700px;
-    position: absolute;
-    width: 100%;
-    background-image: url(../images/fog.png);
-    background-size: contain;
-    background-repeat-x: repeat;
-    background-repeat-y: no-repeat;
-    bottom: -70%; }
   /*********************
 FOOTER STYLES
 *********************/
@@ -3195,9 +3197,7 @@ be seen on the Desktop.
 
 ******************************************************************/
   .wrap {
-    width: 75em; }
-  .fog-background {
-    bottom: -45%; } }
+    width: 75em; } }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .header-nav {

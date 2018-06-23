@@ -1,17 +1,18 @@
 <!--front-page-->
 <?php get_header('front'); ?>
+
 <?php $custom_query = new WP_Query('pagename=home-page-content');
 while($custom_query->have_posts()) : $custom_query->the_post(); ?>
-<div class="row wrap" id="header-graf">
-	<div class="col-xs-0 col-sm-1"></div>
-	<div class="col-xs-12  col-sm-10">
+<div class="row" id="header-graf">
+	<div class="col-xs-1 col-sm-3"></div>
+	<div class="col-xs-10 col-sm-6" style="z-index:99;">
 		<div class="row">
 			<div class="col-xs-12 header-graf">
 				<?php the_field('intro'); ?>
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-0 col-sm-1"></div>
+	<div class="col-xs-1 col-sm-3"></div>
 </div>
 <?php if( get_field('overview') ): ?>
 <div class="overview">
@@ -24,6 +25,7 @@ while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 </div>
 <?php endif; ?>
 <?php endwhile; ?>
+<!--div class="fog-background"></div-->
 <div id="content" class="front-page">
 	<div id="inner-content" class="wrap row">
 		<div class="row">
